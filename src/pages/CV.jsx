@@ -29,11 +29,22 @@ export default function CV() {
         ))}
       </div>
 
-      <div className={s.education}>
-        <span className={`mono ${s.eduKicker}`}>{t('cv.education')}</span>
-        <div className={s.eduBody}>
-          <span className={s.school}>{t('cv.school')}</span>
-          <span className={`text-muted ${s.schoolNote}`}>{t('cv.schoolNote')}</span>
+      {/* The independent iOS years overlapped a full-time job. Saying so
+          turns an apparent gap into evidence of the opposite. */}
+      <div className={s.block}>
+        <span className={`mono ${s.blockKicker}`}>{t('cv.alongside')}</span>
+        <div className={s.blockBody}>
+          <span className={s.blockTitle}>{t('cv.alongsideRole')}</span>
+          <span className={`mono text-muted ${s.blockSpan}`}>{t('cv.alongsideSpan')}</span>
+          <span className={`text-muted ${s.blockNote}`}>{t('cv.alongsideNote')}</span>
+        </div>
+      </div>
+
+      <div className={s.block}>
+        <span className={`mono ${s.blockKicker}`}>{t('cv.education')}</span>
+        <div className={s.blockBody}>
+          <span className={s.blockTitle}>{t('cv.school')}</span>
+          <span className={`text-muted ${s.blockNote}`}>{t('cv.schoolNote')}</span>
         </div>
       </div>
     </main>

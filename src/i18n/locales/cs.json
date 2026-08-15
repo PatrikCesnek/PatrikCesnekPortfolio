@@ -5,7 +5,20 @@
     "siteTitle": "Patrik Cesnek — Senior iOS vývojář",
     "siteDescription": "Senior iOS vývojář v Brně. SwiftUI od jeho prvního vydání, plná odpovědnost za releasy a vlastní vydané aplikace."
   },
-  "months": ["LED", "ÚNO", "BŘE", "DUB", "KVĚ", "ČVN", "ČVC", "SRP", "ZÁŘ", "ŘÍJ", "LIS", "PRO"],
+  "months": [
+    "LED",
+    "ÚNO",
+    "BŘE",
+    "DUB",
+    "KVĚ",
+    "ČVN",
+    "ČVC",
+    "SRP",
+    "ZÁŘ",
+    "ŘÍJ",
+    "LIS",
+    "PRO"
+  ],
   "nav": {
     "work": "PRÁCE",
     "lab": "LABORATOŘ",
@@ -48,7 +61,7 @@
     "paragraphs": [
       "Píšu iOS aplikace od roku 2019 — SwiftUI od jeho prvního vydání — a ty vlastní vydávám déle, než mi za to kdokoli začal platit. To je věc, kterou byste měli vědět jako první: roky mám na starosti celé vydání od začátku do konce — podpis, odeslání, review, postupné nasazení i crash report, který dorazí v sedm ráno.",
       "V poslední době to znamená SwiftUI v produktovém tempu — widgety, HealthKit, Live Activities a centralizovaná vrstva pro chyby, aby žádný chybový stav nebyl překvapením. Předtím jsem vlastnil design systém celé klientské platformy včetně Swift nástrojů, které exportovaly jeho tokeny. Mám rád nudnou infrastrukturu, díky které jsou všichni ostatní rychlejší, a mám rád nízkoúrovňové detaily, o které nikdo nežádal. Apex Ryde vznikl proto, že jsem chtěl vědět, jak se chová frikční kružnice při náklonu 40°.",
-      "Mimo editor: motorky, posilovna, bojové sporty a knihy. Žiju v Brně, pracuji vzdáleně a mluvím slovensky, česky a anglicky."
+      "Mimo editor: motorky, posilovna, cestování a knihy. Žiju v Brně, pracuji vzdáleně a mluvím slovensky, česky a anglicky."
     ],
     "portraitAlt": "Patrik Cesnek",
     "portraitCaption": "Pompeje, někde mezi dvěma ruinami",
@@ -59,7 +72,11 @@
     "download": "STÁHNOUT PDF",
     "education": "VZDĚLÁNÍ",
     "school": "Stredná odborná škola Ivanka pri Dunaji",
-    "schoolNote": "Agropodnikání — kynologie · 2013—2017. Není to titul z informatiky; portfoliem jsou aplikace."
+    "schoolNote": "Agropodnikání — kynologie · 2013—2017. Není to titul z informatiky; portfoliem jsou aplikace.",
+    "alongside": "SOUBĚŽNĚ",
+    "alongsideRole": "Vedoucí potápěčské základny — Wobbegong Beach Dive Club",
+    "alongsideSpan": "ČVN 2016 — ZÁŘ 2021",
+    "alongsideNote": "Senec, Slovensko. Nezávislá iOS práce výše běžela souběžně s tímhle, ne místo toho — aplikace vznikaly po večerech a mimo sezónu, zatímco jsem měl práci na plný úvazek."
   },
   "footer": {
     "identity": "PATRIK CESNEK · SENIOR iOS VÝVOJÁŘ · BRNO, ČR",
@@ -183,10 +200,15 @@
       "short": "Cestovatelská aplikace na App Storu, s vlastním webem.",
       "blurb": "Cestovatelská aplikace na App Storu, s vlastním webem. Mapy, místa a ty části cesty, které si opravdu chcete nechat.",
       "notes": [],
-      "captions": ["moje místa", "památky na mapě", "profil a odznaky"],
+      "captions": [
+        "moje místa",
+        "památky na mapě",
+        "profil a odznaky"
+      ],
       "coverNote": "cestovatelská aplikace",
       "cta": "Otevřít Worldwanderer ↗",
-      "hrefLabel": "App Store · worldwanderer-web.netlify.app"
+      "hrefLabel": "App Store · worldwanderer-web.netlify.app",
+      "ctaWeb": "Otevřít web Worldwanderer ↗"
     },
     "sideq": {
       "span": "VYDÁNO 2026 — POKRAČUJE",
@@ -202,17 +224,22 @@
       ],
       "coverNote": "questová aplikace",
       "cta": "Otevřít SideQ ↗",
-      "hrefLabel": "App Store · sidequest-ios.netlify.app"
+      "hrefLabel": "App Store · sidequest-ios.netlify.app",
+      "ctaWeb": "Otevřít web SideQ ↗"
     },
     "apex-ryde": {
       "span": "POSTAVENO BĚHEM JEDNÉ CESTY VLAKEM",
       "short": "Simulátor motorky s opravdovou převodovkou a modelem frikční kružnice.",
       "blurb": "Simulátor motorky z pohledu první osoby pro iOS: model pneumatik na frikční kružnici, opravdová sekvenční převodovka 1-N-2-3-4-5-6, časování zážehu pro quickshifter, mechanika wheelie. Nula knihoven třetích stran.",
       "notes": [],
-      "captions": ["výběr obtížnosti", "třetí rychlost · 124 km/h", "náklon 40° · 164 km/h"],
+      "captions": [
+        "výběr obtížnosti",
+        "třetí rychlost · 124 km/h",
+        "náklon 40° · 164 km/h"
+      ],
       "coverNote": "motorkářský simulátor",
       "cta": "Otevřít Apex Ryde ↗",
-      "hrefLabel": "apex-ryder"
+      "hrefLabel": "apex-ryder.netlify.app"
     }
   }
 }

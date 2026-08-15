@@ -192,6 +192,32 @@ describe('project page', () => {
     expect(at('/projects/worldwanderer')).toContain('https://apps.apple.com/app/id6772739029')
   })
 
+  it('offers a second button to each shipped app’s own site', () => {
+    const sideq = at('/projects/sideq')
+    expect(sideq).toContain('https://sidequest-ios.netlify.app/')
+    expect(sideq).toContain(en.entries.sideq.ctaWeb)
+
+    const ww = at('/projects/worldwanderer')
+    expect(ww).toContain('worldwanderer-web.netlify.app/?lang=en#apple-maps')
+    expect(ww).toContain(en.entries.worldwanderer.ctaWeb)
+  })
+
+  it('never links to the Netlify admin console', () => {
+    for (const e of ENTRIES) {
+      expect(at(`/projects/${e.slug}`), e.slug).not.toContain('app.netlify.com')
+    }
+  })
+
+  it('points Apex Ryde at its live site', () => {
+    expect(at('/projects/apex-ryde')).toContain('https://apex-ryder.netlify.app')
+  })
+
+  it('shows a web button only where one exists', () => {
+    // Apex has no separate marketing site beyond its own href.
+    const withWeb = ENTRIES.filter((e) => e.web).map((e) => e.slug)
+    expect(withWeb).toEqual(['worldwanderer', 'sideq'])
+  })
+
   it('wraps prev/next around the ends, oldest on the left', () => {
     // Apex Ryde is newest: next wraps to the oldest, prev is SideQ.
     const newest = at('/projects/apex-ryde')
@@ -279,6 +305,15 @@ describe('cv', () => {
     expect(html).toContain(en.cv.education)
     expect(html).toContain(en.cv.school)
     expect(html).toContain(en.cv.schoolNote)
+  })
+
+  it('shows the job the independent iOS years ran alongside', () => {
+    for (const [url, dict] of [['/cv', en], ['/cs/cv', cs], ['/sk/cv', sk]]) {
+      const html = text(url)
+      expect(html, url).toContain('Wobbegong')
+      expect(html, url).toContain(dict.cv.alongside)
+      expect(html, url).toContain(dict.cv.alongsideSpan)
+    }
   })
 
   it('keeps the school name untranslated — it is already Slovak', () => {
