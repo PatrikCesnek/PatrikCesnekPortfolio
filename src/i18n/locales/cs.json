@@ -139,14 +139,15 @@
       "hrefLabel": "interní produkt"
     },
     "freelance": {
-      "span": "LIS 2023 — ČVC 2024",
+      "span": "LIS 2023 — TEĎ",
       "short": "Čtyři domény, aplikace se 100k+ uživateli, CI/CD pipeline — a React front-endy vedle mobilních klientů.",
       "blurb": "Správa kontaktů, navigace, e-commerce a interní nástroje — včetně spotřebitelských aplikací se stovkami tisíc uživatelů. REST API za nimi jsem konzumoval a pomáhal je i formovat a postavil CI/CD pipeline pro automatizované buildy, testy a vydání na App Store. Dodával jsem také webový front-end v JavaScriptu, HTML a CSS, včetně React front-endů vedle mobilních klientů.",
       "notes": [
         "Aplikace se 100k+ uživateli",
         "Firebase backendy od začátku do konce",
         "CI/CD pro automatizované buildy, testy a vydání",
-        "React front-endy vedle mobilních klientů"
+        "React front-endy vedle mobilních klientů",
+        "Průběžně vedle práce na plný úvazek"
       ],
       "captions": [],
       "coverNote": "klientská práce",
