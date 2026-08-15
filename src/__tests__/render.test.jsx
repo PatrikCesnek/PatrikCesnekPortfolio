@@ -290,6 +290,22 @@ describe('cv', () => {
   })
 })
 
+describe('hydration safety', () => {
+  it('renders a locale determined only by the URL', () => {
+    // Any dependence on localStorage or navigator during render would make
+    // the prerendered HTML disagree with the hydrated tree.
+    for (const [url, dict] of [['/', en], ['/cs', cs], ['/sk', sk]]) {
+      expect(at(url), url).toContain(dict.nav.contact)
+    }
+  })
+
+  it('renders identical markup on repeated renders of the same URL', () => {
+    for (const url of ['/', '/cs/about', '/sk/projects/sideq', '/cv']) {
+      expect(at(url), url).toBe(at(url))
+    }
+  })
+})
+
 describe('routes', () => {
   it('renders every project slug without throwing', () => {
     for (const e of ENTRIES) {
