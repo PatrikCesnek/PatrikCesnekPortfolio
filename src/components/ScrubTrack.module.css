@@ -50,6 +50,13 @@
 
 .fill {
   background: linear-gradient(90deg, transparent, var(--color-accent-500));
+  transition: width var(--dur-base) var(--ease-out);
+}
+
+/* While a finger or cursor is down, the fill must track it exactly — an
+   easing curve here reads as lag, not as polish. */
+.dragging .fill {
+  transition: none;
 }
 
 .tick {
@@ -75,7 +82,8 @@
   width: 1px;
   display: block;
   background: var(--color-neutral-700);
-  transition: height var(--transition), background-color var(--transition);
+  transform-origin: bottom;
+  transition: height var(--dur-base) var(--ease-spring), background-color var(--transition);
 }
 
 .markActive {
@@ -91,18 +99,28 @@
   height: 9px;
 }
 
+/* The dot keeps a constant 7px box and scales inside it, so growing the
+   active dot never nudges the label below it. */
 .dot {
-  width: 3px;
-  height: 3px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
   background: var(--color-neutral-700);
-  transition: background-color var(--transition);
+  transform: scale(0.43);
+  transition: transform var(--dur-base) var(--ease-spring), background-color var(--transition);
 }
 
 .dotActive {
-  width: 7px;
-  height: 7px;
+  transform: scale(1);
   background: var(--color-accent-400);
+}
+
+.tick:hover .dot {
+  transform: scale(0.7);
+}
+
+.tick:hover .dotActive {
+  transform: scale(1);
 }
 
 .label {

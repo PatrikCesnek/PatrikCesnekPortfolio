@@ -1,22 +1,28 @@
 import { useNavigate } from 'react-router-dom'
 import { useLocale } from '../i18n/index.js'
 import { useLocalePath } from '../hooks/useLocalePath.js'
+import { useReveal } from '../hooks/useReveal.js'
 import Picture from './Picture.jsx'
 import PlaceholderTile from './PlaceholderTile.jsx'
 import s from './WorkCard.module.css'
 
-export default function WorkCard({ entry }) {
+export default function WorkCard({ entry, index = 0 }) {
   const { t, tEntry } = useLocale()
   const lp = useLocalePath()
   const navigate = useNavigate()
+  const [ref, reveal] = useReveal()
 
   const copy = tEntry(entry.slug)
   const own = entry.kind === 'own'
 
   return (
     <button
+      ref={ref}
       type="button"
-      className={`${s.card} ${own ? s.own : s.job}`}
+      className={`reveal ${s.card} ${own ? s.own : s.job}`}
+      data-reveal={reveal ?? undefined}
+      // Stagger caps at six so a late card never waits a noticeable beat.
+      style={{ '--delay': `${Math.min(index, 5) * 45}ms` }}
       onClick={() => navigate(lp(`/projects/${entry.slug}`))}
     >
       <span className={`mono ${s.meta}`}>

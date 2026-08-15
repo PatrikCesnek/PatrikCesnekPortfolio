@@ -15,8 +15,8 @@ export default function Lab() {
       <p className={s.lede}>{t('lab.lede')}</p>
 
       <div className={s.rows}>
-        {ROWS.map((entry) => (
-          <LabRow key={entry.slug} entry={entry} />
+        {ROWS.map((entry, i) => (
+          <LabRow key={entry.slug} entry={entry} index={i} />
         ))}
       </div>
     </main>

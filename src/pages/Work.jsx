@@ -35,8 +35,8 @@ export default function Work() {
       <section className={s.grid}>
         <h2 className={`mono ${s.heading}`}>{t('work.gridHeading')}</h2>
         <div className={s.cards}>
-          {NEWEST_FIRST.map((entry) => (
-            <WorkCard key={entry.slug} entry={entry} />
+          {NEWEST_FIRST.map((entry, i) => (
+            <WorkCard key={entry.slug} entry={entry} index={i} />
           ))}
         </div>
       </section>
