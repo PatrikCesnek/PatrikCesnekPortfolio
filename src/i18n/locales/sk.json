@@ -139,14 +139,15 @@
       "hrefLabel": "interný produkt"
     },
     "freelance": {
-      "span": "NOV 2023 — JÚL 2024",
+      "span": "NOV 2023 — TERAZ",
       "short": "Štyri domény, aplikácie so 100k+ používateľmi, CI/CD pipeline — a React front-endy popri mobilných klientoch.",
       "blurb": "Správa kontaktov, navigácia, e-commerce a interné nástroje — vrátane spotrebiteľských aplikácií so stovkami tisíc používateľov. REST API za nimi som konzumoval a pomáhal ich aj formovať a postavil CI/CD pipeline pre automatizované buildy, testy a vydania na App Store. Dodával som aj webový front-end v JavaScripte, HTML a CSS, vrátane React front-endov popri mobilných klientoch.",
       "notes": [
         "Aplikácie so 100k+ používateľmi",
         "Firebase backendy od začiatku do konca",
         "CI/CD pre automatizované buildy, testy a vydania",
-        "React front-endy popri mobilných klientoch"
+        "React front-endy popri mobilných klientoch",
+        "Priebežne popri práci na plný úväzok"
       ],
       "captions": [],
       "coverNote": "klientská práca",
