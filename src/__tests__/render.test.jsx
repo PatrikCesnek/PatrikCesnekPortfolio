@@ -60,7 +60,8 @@ describe('locale routing', () => {
     for (const [prefix, dict] of [['', en], ['/cs', cs], ['/sk', sk]]) {
       const html = at(`${prefix}/projects/sideq`)
       expect(html, prefix).toContain('SideQ')
-      expect(html, prefix).toContain(dict.entries.sideq.short)
+      // The project page's lede is the full blurb, not the card one-liner.
+      expect(html, prefix).toContain(dict.entries.sideq.blurb)
     }
   })
 })
@@ -146,6 +147,59 @@ describe('work grid', () => {
     const html = at('/')
     expect(html).toContain(en.work.gridHeading)
     for (const e of ENTRIES) expect(html, e.slug).toContain(en.entries[e.slug].short)
+  })
+})
+
+describe('project page', () => {
+  it('renders a portrait project as one bezel per screenshot, captioned', () => {
+    const html = at('/projects/sideq')
+    const sideq = ENTRIES.find((e) => e.slug === 'sideq')
+    expect((html.match(/<img/g) ?? []).length).toBe(sideq.images.length)
+    for (const caption of en.entries.sideq.captions) expect(html).toContain(caption)
+  })
+
+  it('renders a landscape project as wide figures', () => {
+    const html = at('/projects/apex-ryde')
+    for (const caption of en.entries['apex-ryde'].captions) expect(html).toContain(caption)
+  })
+
+  it('describes client work at the larger scale, never showing it', () => {
+    const html = at('/projects/o2-slovakia')
+    expect(html).toContain(en.work.owned)
+    expect(html).toContain(en.project.notShownLong)
+    expect(html).not.toContain('<img')
+  })
+
+  it('lists the entry tags in the rail', () => {
+    const html = at('/projects/o2-slovakia')
+    expect(html).toContain(en.project.builtWith)
+    expect(html).toContain(en.project.when)
+    for (const tag of ENTRIES.find((e) => e.slug === 'o2-slovakia').tags) {
+      expect(html).toContain(tag)
+    }
+  })
+
+  it('sends the outbound CTA to the App Store for shipped apps', () => {
+    expect(at('/projects/sideq')).toContain('https://apps.apple.com/app/sideq/id6767996805')
+    expect(at('/projects/worldwanderer')).toContain('https://apps.apple.com/app/id6772739029')
+  })
+
+  it('wraps prev/next around the ends, oldest on the left', () => {
+    // Apex Ryde is newest: next wraps to the oldest, prev is SideQ.
+    const newest = at('/projects/apex-ryde')
+    expect(newest).toContain('Independent iOS →')
+    expect(newest).toContain('← SideQ')
+
+    // Independent iOS is oldest: prev wraps back to the newest.
+    const oldest = at('/projects/independent-ios')
+    expect(oldest).toContain('← Apex Ryde')
+    expect(oldest).toContain('Matee →')
+  })
+
+  it('keeps prev/next inside the active locale', () => {
+    const html = at('/cs/projects/sideq')
+    expect(html).toContain('href="/cs/projects/worldwanderer"')
+    expect(html).toContain('href="/cs/projects/apex-ryde"')
   })
 })
 
