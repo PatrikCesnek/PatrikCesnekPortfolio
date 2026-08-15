@@ -2,8 +2,18 @@
   "meta": {
     "name": "English",
     "htmlLang": "en",
-    "siteTitle": "Patrik Cesnek — Senior iOS Developer",
-    "siteDescription": "Senior iOS developer in Brno. SwiftUI since its first release, full release ownership, and a shelf of my own shipped apps."
+    "siteTitle": "Patrik Cesnek — Freelance iOS Developer, Remote EU",
+    "siteDescription": "Senior iOS developer available for freelance and contract work, remote across the EU. SwiftUI since 2019, Swift 6, and full release ownership on shipped App Store apps.",
+    "h1": "Patrik Cesnek — senior iOS developer available for freelance and contract work, remote across the EU",
+    "jobTitle": "Senior iOS Developer",
+    "availability": "Available for freelance and contract work · remote across the EU · open to relocation within the EU for the right long-term project",
+    "titleLab": "The Lab — iOS side projects and landing pages | Patrik Cesnek",
+    "descLab": "Apps and websites I build to understand how things work: a motorcycle physics simulator, a quest app in Swift 6, and the multilingual landing pages I ship for each of them.",
+    "titleAbout": "About Patrik Cesnek — Senior iOS Developer for Hire",
+    "descAbout": "Seven years of Swift, SwiftUI since its first release, and full release ownership. Based in Brno, working remotely across the EU, available for contract work.",
+    "titleCv": "CV — Patrik Cesnek, Senior iOS Developer (SwiftUI, Swift 6)",
+    "descCv": "Career timeline and downloadable CV. iOS since 2019: SwiftUI, Swift 6 strict concurrency, Kotlin Multiplatform, design systems, CI/CD and full App Store release ownership.",
+    "projectTitleSuffix": "iOS case study by Patrik Cesnek"
   },
   "months": [
     "JAN",

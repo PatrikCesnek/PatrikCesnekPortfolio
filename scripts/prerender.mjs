@@ -10,10 +10,29 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { ENTRIES } from '../src/content/entries.js'
+import {
+  person,
+  website,
+  softwareApplication,
+  breadcrumbs,
+  graph,
+} from './structured-data.mjs'
 
 const LOCALES = ['en', 'cs', 'sk']
 const DEFAULT_LOCALE = 'en'
-const SITE = (process.env.SITE_URL ?? 'https://patrikcesnek.netlify.app').replace(/\/$/, '')
+
+/**
+ * Netlify sets URL to the site's own production address, so canonicals can
+ * never drift from where the site actually lives. A hardcoded guess put every
+ * canonical, hreflang and og:url on a domain that 404s, which tells Google the
+ * real page is elsewhere — the fastest way to fall out of the index.
+ * SITE_URL overrides for other hosts; the fallback is local only.
+ */
+const SITE = (process.env.SITE_URL ?? process.env.URL ?? 'http://localhost:4173').replace(/\/$/, '')
+
+if (!process.env.SITE_URL && !process.env.URL) {
+  console.warn('! No SITE_URL or URL set — canonicals will point at localhost.')
+}
 
 const { render } = await import(pathToFileURL(join(process.cwd(), 'dist/server/entry-server.js')).href)
 
@@ -42,9 +61,31 @@ for (const locale of LOCALES) {
     const dict = dicts[locale]
     const entry = ENTRIES.find((e) => `/projects/${e.slug}` === route)
 
-    const title = entry ? `${entry.title} — Patrik Cesnek` : dict.meta.siteTitle
-    const description = entry ? dict.entries[entry.slug].short : dict.meta.siteDescription
-    const image = entry?.images ? `${SITE}/img/${entry.images[0]}-760.jpg` : `${SITE}/img/ww-2-760.jpg`
+    const PAGE_META = {
+      '/lab': [dict.meta.titleLab, dict.meta.descLab],
+      '/about': [dict.meta.titleAbout, dict.meta.descAbout],
+      '/cv': [dict.meta.titleCv, dict.meta.descCv],
+    }
+
+    const [title, description] = entry
+      ? [`${entry.title} — ${dict.meta.projectTitleSuffix}`, dict.entries[entry.slug].short]
+      : (PAGE_META[route] ?? [dict.meta.siteTitle, dict.meta.siteDescription])
+
+    const image = entry?.images
+      ? `${SITE}/img/${entry.images[0]}-760.jpg`
+      : `${SITE}/img/og-default-1200.jpg`
+
+    const nodes = [
+      website(SITE, dict, locale),
+      route === '/' || route === '/about'
+        ? { '@type': 'ProfilePage', '@id': `${SITE}${url}#page`, mainEntity: { '@id': `${SITE}/#patrik` } }
+        : null,
+      person(SITE, dict),
+      entry && entry.kind === 'own' ? softwareApplication(SITE, dict, entry) : null,
+      route !== '/'
+        ? breadcrumbs(SITE, (p) => prefix(locale, p), route, entry ? entry.title : title.split(' — ')[0])
+        : null,
+    ]
 
     const alternates = LOCALES.map(
       (l) => `<link rel="alternate" hreflang="${l}" href="${SITE}${prefix(l, route)}">`
@@ -65,7 +106,8 @@ for (const locale of LOCALES) {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(title)}">
     <meta name="twitter:description" content="${esc(description)}">
-    <meta name="twitter:image" content="${image}">`
+    <meta name="twitter:image" content="${image}">
+    <script type="application/ld+json">${graph(nodes)}</script>`
 
     const html = render(url)
 
@@ -100,4 +142,14 @@ ${LOCALES.map(
 
 await writeFile('dist/sitemap.xml', sitemap)
 
-console.log(`prerendered ${count} routes + sitemap`)
+// Generated rather than static so the sitemap URL follows the real domain.
+await writeFile(
+  'dist/robots.txt',
+  `User-agent: *
+Allow: /
+
+Sitemap: ${SITE}/sitemap.xml
+`
+)
+
+console.log(`prerendered ${count} routes + sitemap + robots (site: ${SITE})`)

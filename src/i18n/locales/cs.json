@@ -2,8 +2,18 @@
   "meta": {
     "name": "Čeština",
     "htmlLang": "cs",
-    "siteTitle": "Patrik Cesnek — Senior iOS vývojář",
-    "siteDescription": "Senior iOS vývojář v Brně. SwiftUI od jeho prvního vydání, plná odpovědnost za releasy a vlastní vydané aplikace."
+    "siteTitle": "Patrik Cesnek — iOS vývojář na volné noze, remote EU",
+    "siteDescription": "Senior iOS vývojář k dispozici pro zakázky a kontrakty, remote v rámci EU. SwiftUI od roku 2019, Swift 6 a plná odpovědnost za vydání aplikací na App Store.",
+    "h1": "Patrik Cesnek — senior iOS vývojář k dispozici pro zakázky a kontrakty, remote v rámci EU",
+    "jobTitle": "Senior iOS vývojář",
+    "availability": "K dispozici pro zakázky a kontrakty · remote v rámci EU · otevřen přestěhování v rámci EU u dlouhodobého projektu",
+    "titleLab": "Laboratoř — iOS projekty a landing pages | Patrik Cesnek",
+    "descLab": "Aplikace a weby, které stavím, abych pochopil, jak věci fungují: simulátor fyziky motorky, questová aplikace ve Swiftu 6 a vícejazyčné landing pages ke každé z nich.",
+    "titleAbout": "O mně — Patrik Cesnek, senior iOS vývojář na volné noze",
+    "descAbout": "Sedm let se Swiftem, SwiftUI od jeho prvního vydání a plná odpovědnost za releasy. Sídlím v Brně, pracuji remote v rámci EU, k dispozici pro zakázky.",
+    "titleCv": "Životopis — Patrik Cesnek, senior iOS vývojář (SwiftUI, Swift 6)",
+    "descCv": "Časová osa kariéry a životopis ke stažení. iOS od roku 2019: SwiftUI, Swift 6, Kotlin Multiplatform, design systémy, CI/CD a plná odpovědnost za vydání na App Store.",
+    "projectTitleSuffix": "iOS případová studie od Patrika Cesneka"
   },
   "months": [
     "LED",
