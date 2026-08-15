@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "assets": "node scripts/optimize-assets.mjs"
+    "assets": "node scripts/optimize-assets.mjs",
+    "web-cards": "node scripts/build-web-cards.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

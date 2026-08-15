@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
 import App from '../App.jsx'
 import { ENTRIES } from '../content/entries.js'
+import { WEB_PROJECTS } from '../content/webProjects.js'
 import en from '../i18n/locales/en.json'
 import cs from '../i18n/locales/cs.json'
 import sk from '../i18n/locales/sk.json'
@@ -252,6 +253,48 @@ describe('lab', () => {
 
   it('gives Independent iOS a placeholder — it is own but has no screenshots', () => {
     expect(at('/lab')).toContain(en.entries['independent-ios'].coverNote)
+  })
+})
+
+describe('web section', () => {
+  it('lists all three shipped marketing sites', () => {
+    const html = text('/lab')
+    expect(html).toContain(en.web.heading)
+    for (const site of WEB_PROJECTS) {
+      expect(html, site.slug).toContain(site.href)
+      expect(html, site.slug).toContain(en.web.sites[site.slug])
+    }
+  })
+
+  it('shows the languages each site actually ships', () => {
+    const html = at('/lab')
+    expect(html).toContain('EN · CS · SK · DE · ES')
+  })
+
+  it('opens each site in a new tab safely', () => {
+    const html = at('/lab')
+    for (const site of WEB_PROJECTS) {
+      const tag = html.match(new RegExp(`<a[^>]*href="${site.href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"[^>]*>`))
+      expect(tag, site.slug).not.toBeNull()
+      expect(tag[0], site.slug).toContain('rel="noopener"')
+      expect(tag[0], site.slug).toContain('target="_blank"')
+    }
+  })
+
+  it('gives each card a real preview image with alt text', () => {
+    const html = at('/lab')
+    for (const site of WEB_PROJECTS) {
+      expect(html, site.slug).toContain(`/img/${site.image}-`)
+    }
+    expect(html).toContain('The SideQ site')
+  })
+
+  it('translates the section', () => {
+    for (const [url, dict] of [['/cs/lab', cs], ['/sk/lab', sk]]) {
+      const html = text(url)
+      expect(html, url).toContain(dict.web.lede)
+      expect(html, url).toContain(dict.web.sites.sideq)
+    }
   })
 })
 

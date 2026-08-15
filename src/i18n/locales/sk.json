@@ -241,5 +241,15 @@
       "cta": "Otvoriť Apex Ryde ↗",
       "hrefLabel": "apex-ryder.netlify.app"
     }
+  },
+  "web": {
+    "heading": "Web",
+    "lede": "Ku každej aplikácii vyššie patrí web, ktorý som navrhol, napísal, lokalizoval a nasadil sám — ručne písané HTML, CSS a JavaScript, žiadny framework a žiadny build. Ak potrebujete landing page, ktorá sa načíta okamžite a hovorí jazykom vašich zákazníkov, toto je tá práca.",
+    "shotAlt": "Web {name}",
+    "sites": {
+      "apex": "Landing page pre motorkársky simulátor, vytvorená v rovnakom období ako hra. Štruktúrované dáta, sitemap a stránka, ktorá sa vykreslí skôr, než si to všimnete.",
+      "sideq": "Produktový web: päť jazykov prepínaných za behu, JSON-LD pre vyhľadávače a priama cesta z landing page na App Store.",
+      "worldwanderer": "Landing page, zásady súkromia a podpora pre cestovateľskú aplikáciu, v rovnakom vizuálnom jazyku ako aplikácia sama."
+    }
   }
 }

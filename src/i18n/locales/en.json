@@ -241,5 +241,15 @@
       "cta": "Open Apex Ryde ↗",
       "hrefLabel": "apex-ryder.netlify.app"
     }
+  },
+  "web": {
+    "heading": "Web",
+    "lede": "Every app above ships a site I designed, wrote, localized and deployed myself — hand-written HTML, CSS and JavaScript, no framework and no build step. If you need a landing page that loads instantly and speaks your customers' language, this is the work.",
+    "shotAlt": "The {name} site",
+    "sites": {
+      "apex": "A landing page for the motorcycle sim, built in the same stretch as the game. Structured data, sitemap, and a page that paints before you notice it.",
+      "sideq": "The product site: five languages switched at runtime, JSON-LD for search, and a straight path from landing to the App Store.",
+      "worldwanderer": "Landing, privacy and support pages for the travel app, sharing the app's own visual language and deep-linking into its map."
+    }
   }
 }
