@@ -140,12 +140,13 @@
     },
     "freelance": {
       "span": "LIS 2023 — ČVC 2024",
-      "short": "Čtyři domény za osm měsíců, včetně aplikací se 100k+ uživateli.",
-      "blurb": "Správa kontaktů, navigace, e-commerce a interní nástroje — včetně spotřebitelských aplikací se stovkami tisíc uživatelů. REST API za nimi jsem konzumoval a pomáhal je i formovat.",
+      "short": "Čtyři domény, aplikace se 100k+ uživateli, CI/CD pipeline — a React front-endy vedle mobilních klientů.",
+      "blurb": "Správa kontaktů, navigace, e-commerce a interní nástroje — včetně spotřebitelských aplikací se stovkami tisíc uživatelů. REST API za nimi jsem konzumoval a pomáhal je i formovat a postavil CI/CD pipeline pro automatizované buildy, testy a vydání na App Store. Dodával jsem také webový front-end v JavaScriptu, HTML a CSS, včetně React front-endů vedle mobilních klientů.",
       "notes": [
         "Aplikace se 100k+ uživateli",
         "Firebase backendy od začátku do konce",
-        "Čtyři domény za osm měsíců"
+        "CI/CD pro automatizované buildy, testy a vydání",
+        "React front-endy vedle mobilních klientů"
       ],
       "captions": [],
       "coverNote": "klientská práce",
@@ -183,11 +184,12 @@
     },
     "formcoach": {
       "span": "LED 2026 — TEĎ",
-      "short": "Fitness aplikace ve SwiftUI: widgety, HealthKit, Live Activities, jedna chybová vrstva.",
-      "blurb": "Stavím fitness aplikaci FormCoach ve SwiftUI: WidgetKit, HealthKit, Live Activities a plná lokalizace, nad centralizovanou vrstvou pro zpracování chyb, která pokrývá každý chybový stav.",
+      "short": "Fitness aplikace ve SwiftUI: widgety, HealthKit, Live Activities, jedna chybová vrstva — a CI/CD za tím vším.",
+      "blurb": "Stavím fitness aplikaci FormCoach ve SwiftUI: WidgetKit, HealthKit, Live Activities a plná lokalizace, nad centralizovanou vrstvou pro zpracování chyb, která pokrývá každý chybový stav. Vlastním také CI/CD pipeline — automatizované buildy, testy a distribuci přes TestFlight.",
       "notes": [
         "Widgety, HealthKit, Live Activities",
         "Jedna chybová vrstva, každý chybový stav",
+        "Vlastním CI/CD pipeline od začátku do konce",
         "Současná role"
       ],
       "captions": [],

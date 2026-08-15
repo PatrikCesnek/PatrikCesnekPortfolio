@@ -140,12 +140,13 @@
     },
     "freelance": {
       "span": "NOV 2023 — JULY 2024",
-      "short": "Four domains in eight months, including apps with 100k+ users.",
-      "blurb": "Contact management, navigation, e-commerce and internal tooling — including consumer apps with hundreds of thousands of users. Consumed and helped shape the REST APIs behind them.",
+      "short": "Four domains, apps with 100k+ users, CI/CD pipelines — and React front ends alongside the mobile clients.",
+      "blurb": "Contact management, navigation, e-commerce and internal tooling — including consumer apps with hundreds of thousands of users. Consumed and helped shape the REST APIs behind them, and built the CI/CD pipelines for automated builds, tests and App Store releases. Also delivered web front-end work in JavaScript, HTML and CSS, including React front ends alongside the mobile clients.",
       "notes": [
         "Apps with 100k+ users",
         "Firebase back ends end to end",
-        "Four domains in eight months"
+        "CI/CD for automated builds, tests and releases",
+        "React front ends alongside the mobile clients"
       ],
       "captions": [],
       "coverNote": "client work",
@@ -183,11 +184,12 @@
     },
     "formcoach": {
       "span": "JAN 2026 — NOW",
-      "short": "SwiftUI fitness app: widgets, HealthKit, Live Activities, one error layer.",
-      "blurb": "Building the FormCoach fitness app in SwiftUI: WidgetKit, HealthKit, Live Activities and full localization, over a centralized error-handling layer that covers every failure state.",
+      "short": "SwiftUI fitness app: widgets, HealthKit, Live Activities, one error layer — and the CI/CD behind it.",
+      "blurb": "Building the FormCoach fitness app in SwiftUI: WidgetKit, HealthKit, Live Activities and full localization, over a centralized error-handling layer that covers every failure state. I also own the CI/CD pipeline — automated builds, tests and TestFlight distribution.",
       "notes": [
         "Widgets, HealthKit, Live Activities",
         "One error-handling layer, every failure state",
+        "Own the CI/CD pipeline end to end",
         "Current role"
       ],
       "captions": [],
