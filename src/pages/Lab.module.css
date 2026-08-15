@@ -1,0 +1,38 @@
+.page {
+  padding: 56px var(--gutter) 110px;
+  max-width: 1180px;
+}
+
+.title {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--color-neutral-300);
+  max-width: 640px;
+  margin: 0 0 48px;
+  text-wrap: pretty;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .lede {
+    font-size: 17px;
+    margin-bottom: 36px;
+  }
+}
