@@ -9,6 +9,14 @@ import sk from '../i18n/locales/sk.json'
 
 const at = (url) => renderToStaticMarkup(<StaticRouter location={url}><App /></StaticRouter>)
 
+/**
+ * Same markup with text entities decoded, for asserting on prose. React
+ * escapes apostrophes and ampersands, so "I've" ships as "I&#x27;ve".
+ * Angle brackets are deliberately left alone so `<img` assertions stay honest.
+ */
+const text = (url) =>
+  at(url).replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&')
+
 describe('app shell', () => {
   it('renders the brand and every nav item on the home route', () => {
     const html = at('/')
@@ -200,6 +208,85 @@ describe('project page', () => {
     const html = at('/cs/projects/sideq')
     expect(html).toContain('href="/cs/projects/worldwanderer"')
     expect(html).toContain('href="/cs/projects/apex-ryde"')
+  })
+})
+
+describe('lab', () => {
+  it('lists own projects only, newest first', () => {
+    const html = at('/lab')
+    const own = ENTRIES.filter((e) => e.kind === 'own')
+    for (const e of own) expect(html, e.slug).toContain(e.title)
+    for (const e of ENTRIES.filter((x) => x.kind === 'job')) {
+      expect(html, e.slug).not.toContain(`>${e.title}<`)
+    }
+    const body = html.slice(html.indexOf(en.lab.lede))
+    const positions = own.map((e) => body.indexOf(e.title))
+    expect([...positions].sort((a, b) => b - a)).toEqual(positions)
+  })
+
+  it('gives Independent iOS a placeholder — it is own but has no screenshots', () => {
+    expect(at('/lab')).toContain(en.entries['independent-ios'].coverNote)
+  })
+})
+
+describe('about', () => {
+  it('renders all three paragraphs and the portrait', () => {
+    const html = text('/about')
+    for (const para of en.about.paragraphs) expect(html).toContain(para)
+    expect(html).toContain('/img/portrait-640.jpg')
+    expect(html).toContain(en.about.portraitCaption)
+  })
+
+  it('renders six skill groups with their untranslated items', () => {
+    const html = text('/about')
+    for (const g of en.skills) {
+      expect(html).toContain(g.group)
+      expect(html).toContain(g.note)
+    }
+    expect(html).toContain('Kotlin Multiplatform (~2 yrs)')
+  })
+
+  it('keeps technical terms in English while translating the prose', () => {
+    const html = text('/cs/about')
+    expect(html).toContain(cs.about.title)
+    expect(html).toContain(cs.skills[0].note)
+    expect(html).toContain('SwiftUI (7+ yrs)')
+  })
+
+  it('links email and phone', () => {
+    const html = at('/about')
+    expect(html).toContain('mailto:pcesnek290@gmail.com')
+    expect(html).toContain('tel:+421948093464')
+  })
+})
+
+describe('cv', () => {
+  it('lists all nine entries newest first with OWN/CONTRACT labels', () => {
+    const html = at('/cv')
+    for (const e of ENTRIES) expect(html, e.slug).toContain(e.title)
+    expect(html).toContain(`>${en.kind.ownShort}<`)
+    expect(html).toContain(`>${en.kind.jobShort}<`)
+  })
+
+  it('downloads a real PDF rather than opening email', () => {
+    const html = at('/cv')
+    expect(html).toContain('href="/cv/Patrik_Cesnek_CV.pdf"')
+    expect(html).toContain('download="Patrik_Cesnek_CV.pdf"')
+  })
+
+  it('closes with the education block', () => {
+    const html = at('/cv')
+    expect(html).toContain(en.cv.education)
+    expect(html).toContain(en.cv.school)
+    expect(html).toContain(en.cv.schoolNote)
+  })
+
+  it('keeps the school name untranslated — it is already Slovak', () => {
+    for (const [url, dict] of [['/cs/cv', cs], ['/sk/cv', sk]]) {
+      expect(at(url)).toContain(dict.cv.school)
+    }
+    expect(cs.cv.school).toBe(en.cv.school)
+    expect(sk.cv.school).toBe(en.cv.school)
   })
 })
 
