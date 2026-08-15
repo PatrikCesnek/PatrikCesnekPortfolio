@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "name": "Čeština",
+    "htmlLang": "cs",
+    "siteTitle": "Patrik Cesnek — Senior iOS vývojář",
+    "siteDescription": "Senior iOS vývojář v Brně. SwiftUI od jeho prvního vydání, plná odpovědnost za releasy a vlastní vydané aplikace."
+  },
+  "months": ["LED", "ÚNO", "BŘE", "DUB", "KVĚ", "ČVN", "ČVC", "SRP", "ZÁŘ", "ŘÍJ", "LIS", "PRO"],
+  "nav": {
+    "work": "PRÁCE",
+    "lab": "LABORATOŘ",
+    "about": "O MNĚ",
+    "cv": "CV",
+    "contact": "OZVĚTE SE",
+    "role": "SENIOR iOS VÝVOJÁŘ · BRNO",
+    "language": "Jazyk",
+    "skip": "Přeskočit na obsah"
+  },
+  "kind": {
+    "own": "VLASTNÍ PROJEKT",
+    "job": "ZAMĚSTNÁN",
+    "ownShort": "VLASTNÍ",
+    "jobShort": "KONTRAKT"
+  },
+  "work": {
+    "gridHeading": "Všechno, od nejnovějšího",
+    "openCase": "Otevřít případ →",
+    "trackHint": "TÁHNUTÍM PROCHÁZEJTE · {count} ZÁZNAMŮ · 2019—2026",
+    "trackHintTouch": "PŘEJETÍM PROCHÁZEJTE · {count} ZÁZNAMŮ · 2019—2026",
+    "timeline": "Časová osa",
+    "owned": "CO JSEM VLASTNIL",
+    "notShown": "Klientská práce — popsaná, neukázaná."
+  },
+  "project": {
+    "back": "← ZPĚT NA ČASOVOU OSU",
+    "builtWith": "POSTAVENO Z",
+    "when": "KDY",
+    "notShownLong": "Klientská práce — popsaná, neukázaná. Rád vás jí provedu na hovoru.",
+    "notFound": "Takový projekt neexistuje.",
+    "notFoundBack": "← Zpět na časovou osu"
+  },
+  "lab": {
+    "title": "Laboratoř",
+    "lede": "Věci, které stavím pro radost z pochopení, jak doopravdy fungují. Žádný roadmap, žádní stakeholdeři — jen ta část, kde zjistíte, proč pneumatika ztrácí přilnavost nebo jak má působit engine na questy."
+  },
+  "about": {
+    "title": "Ahoj — jsem Patrik.",
+    "paragraphs": [
+      "Píšu iOS aplikace od roku 2019 — SwiftUI od jeho prvního vydání — a ty vlastní vydávám déle, než mi za to kdokoli začal platit. To je věc, kterou byste měli vědět jako první: roky mám na starosti celé vydání od začátku do konce — podpis, odeslání, review, postupné nasazení i crash report, který dorazí v sedm ráno.",
+      "V poslední době to znamená SwiftUI v produktovém tempu — widgety, HealthKit, Live Activities a centralizovaná vrstva pro chyby, aby žádný chybový stav nebyl překvapením. Předtím jsem vlastnil design systém celé klientské platformy včetně Swift nástrojů, které exportovaly jeho tokeny. Mám rád nudnou infrastrukturu, díky které jsou všichni ostatní rychlejší, a mám rád nízkoúrovňové detaily, o které nikdo nežádal. Apex Ryde vznikl proto, že jsem chtěl vědět, jak se chová frikční kružnice při náklonu 40°.",
+      "Mimo editor: motorky, posilovna, bojové sporty a knihy. Žiju v Brně, pracuji vzdáleně a mluvím slovensky, česky a anglicky."
+    ],
+    "portraitAlt": "Patrik Cesnek",
+    "portraitCaption": "Pompeje, někde mezi dvěma ruinami",
+    "location": "Brno, ČR · vzdáleně"
+  },
+  "cv": {
+    "title": "Životopis",
+    "download": "STÁHNOUT PDF",
+    "education": "VZDĚLÁNÍ",
+    "school": "Stredná odborná škola Ivanka pri Dunaji",
+    "schoolNote": "Agropodnikání — kynologie · 2013—2017. Není to titul z informatiky; portfoliem jsou aplikace."
+  },
+  "footer": {
+    "identity": "PATRIK CESNEK · SENIOR iOS VÝVOJÁŘ · BRNO, ČR",
+    "email": "E-MAIL"
+  },
+  "skills": [
+    {
+      "group": "SWIFT A APPLE",
+      "note": "SwiftUI od roku 2019, hned po jeho prvním vydání. Swift 6 se striktní konkurencí na vlastních produktech dřív, než to bylo v práci potřeba."
+    },
+    {
+      "group": "WEB",
+      "note": "Dost front-endu na to, abych postavil a vydal marketingové weby pro vlastní aplikace a domluvil se s webovými týmy bez tlumočníka."
+    },
+    {
+      "group": "MULTIPLATFORMNÍ VÝVOJ",
+      "note": "Dva roky na sdílené KMP vrstvě; Kotlin pohodlně čtu a základy píšu."
+    },
+    {
+      "group": "DATA A BACKEND",
+      "note": "API jsem nejen konzumoval, ale pomáhal je i navrhovat."
+    },
+    {
+      "group": "RELEASE A MONITORING",
+      "note": "Plná odpovědnost za releasy od roku 2020: podpis, odeslání, review, postupné nasazení a pak čtení crash a event dat a stanovení priorit podle nich."
+    },
+    {
+      "group": "NÍZKÁ ÚROVEŇ A BEZPEČNOST",
+      "note": "Učím se, není to profesionální praxe — říkám to schválně na rovinu. Vzešlo to z flashování Android zařízení v pubertě a ze zvyku rozebírat věci, který mi zůstal."
+    }
+  ],
+  "entries": {
+    "independent-ios": {
+      "span": "2019 — ÚNO 2022",
+      "short": "Vlastní aplikace, vydané sám, na SwiftUI od jeho prvního vydání.",
+      "blurb": "Kde to začalo: vlastní aplikace, postavené od začátku do konce. Nejdřív Swift a UIKit, pak SwiftUI od roku 2019 — hned po jeho prvním vydání. Podpis, odeslání, review: od prvního buildu dál jsem vlastnil úplně všechno.",
+      "notes": [
+        "Vydáno sólo, od začátku po review",
+        "Naučil jsem se UIKit dřív, než pro něj existovalo SwiftUI",
+        "Odpovědnost za releasy od prvního dne"
+      ],
+      "captions": [],
+      "coverNote": "raná ikona aplikace",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "žádný veřejný build"
+    },
+    "matee": {
+      "span": "ÚNO 2022 — LIS 2023",
+      "short": "Přepis zastaralé interní codebase do SwiftUI a sdílená KMP vrstva.",
+      "blurb": "Přepsal jsem zastaralou interní codebase do moderního SwiftUI, postavil nové obrazovky a nastavil automatizované UI testy. Dva roky na sdílené vrstvě v Kotlin Multiplatform, půl roku raného Compose Multiplatform.",
+      "notes": [
+        "Přepis ze starého UIKitu do SwiftUI",
+        "~2 roky na sdílené KMP vrstvě",
+        "Pořadí oprav určovala crash a event data"
+      ],
+      "captions": [],
+      "coverNote": "interní produkt",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "interní produkt"
+    },
+    "freelance": {
+      "span": "LIS 2023 — ČVC 2024",
+      "short": "Čtyři domény za osm měsíců, včetně aplikací se 100k+ uživateli.",
+      "blurb": "Správa kontaktů, navigace, e-commerce a interní nástroje — včetně spotřebitelských aplikací se stovkami tisíc uživatelů. REST API za nimi jsem konzumoval a pomáhal je i formovat.",
+      "notes": [
+        "Aplikace se 100k+ uživateli",
+        "Firebase backendy od začátku do konce",
+        "Čtyři domény za osm měsíců"
+      ],
+      "captions": [],
+      "coverNote": "klientská práce",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "klientská práce"
+    },
+    "billdu": {
+      "span": "ZÁŘ 2024 — ÚNO 2025",
+      "short": "Aplikace na fakturaci, plánování a komunikaci pro malé firmy.",
+      "blurb": "Několik aplikací, které malým firmám pomáhají fakturovat, plánovat a mluvit se zákazníky. REST, lokální perzistence v SQLite, MVVM napříč celou aplikací.",
+      "notes": [
+        "Několik vydaných aplikací",
+        "Offline-first perzistence v SQLite",
+        "Fakturace, plánování, komunikace"
+      ],
+      "captions": [],
+      "coverNote": "klientský produkt",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "klientský produkt"
+    },
+    "o2-slovakia": {
+      "span": "ČVN 2025 — LED 2026",
+      "short": "Jediný vlastník design systému platformy a Swift nástrojů za jeho tokeny.",
+      "blurb": "Vlastnil jsem design systém pro celou klientskou platformu O2 pod velmi vysokými nároky na kvalitu kódu. Napsal jsem Swift skript, který zpracovává a exportuje design tokeny, plus UI a unit testy pro oba balíčky — měřitelně to změnilo způsob, jakým pracoval zbytek mobilního týmu.",
+      "notes": [
+        "Jediný vlastník design systému platformy",
+        "Swift pipeline na export tokenů",
+        "UI a unit testy napříč dvěma balíčky"
+      ],
+      "captions": [],
+      "coverNote": "klientská platforma",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "klientská platforma"
+    },
+    "formcoach": {
+      "span": "LED 2026 — TEĎ",
+      "short": "Fitness aplikace ve SwiftUI: widgety, HealthKit, Live Activities, jedna chybová vrstva.",
+      "blurb": "Stavím fitness aplikaci FormCoach ve SwiftUI: WidgetKit, HealthKit, Live Activities a plná lokalizace, nad centralizovanou vrstvou pro zpracování chyb, která pokrývá každý chybový stav.",
+      "notes": [
+        "Widgety, HealthKit, Live Activities",
+        "Jedna chybová vrstva, každý chybový stav",
+        "Současná role"
+      ],
+      "captions": [],
+      "coverNote": "současná role",
+      "cta": "Zeptejte se mě na to",
+      "hrefLabel": "současná role"
+    },
+    "worldwanderer": {
+      "span": "VYDÁNO 2026",
+      "short": "Cestovatelská aplikace na App Storu, s vlastním webem.",
+      "blurb": "Cestovatelská aplikace na App Storu, s vlastním webem. Mapy, místa a ty části cesty, které si opravdu chcete nechat.",
+      "notes": [],
+      "captions": ["moje místa", "památky na mapě", "profil a odznaky"],
+      "coverNote": "cestovatelská aplikace",
+      "cta": "Otevřít Worldwanderer ↗",
+      "hrefLabel": "App Store · worldwanderer-web.netlify.app"
+    },
+    "sideq": {
+      "span": "VYDÁNO 2026 — POKRAČUJE",
+      "short": "Questy v reálném světě. Swift 6, striktní konkurence, pět lokálních balíčků.",
+      "blurb": "Questy v reálném světě pro lidi, kteří potřebují postrčit ze dveří. Swift 6 se striktní konkurencí, pět lokálních SPM balíčků, SwiftData a StoreKit 2 — vydáváno iterativně, s plným sociálním releasem a německou lokalizací.",
+      "notes": [],
+      "captions": [
+        "quest dne",
+        "quest v průběhu",
+        "dokončeno + achievementy",
+        "tvoje sidequesty",
+        "statistiky"
+      ],
+      "coverNote": "questová aplikace",
+      "cta": "Otevřít SideQ ↗",
+      "hrefLabel": "App Store · sidequest-ios.netlify.app"
+    },
+    "apex-ryde": {
+      "span": "POSTAVENO BĚHEM JEDNÉ CESTY VLAKEM",
+      "short": "Simulátor motorky s opravdovou převodovkou a modelem frikční kružnice.",
+      "blurb": "Simulátor motorky z pohledu první osoby pro iOS: model pneumatik na frikční kružnici, opravdová sekvenční převodovka 1-N-2-3-4-5-6, časování zážehu pro quickshifter, mechanika wheelie. Nula knihoven třetích stran.",
+      "notes": [],
+      "captions": ["výběr obtížnosti", "třetí rychlost · 124 km/h", "náklon 40° · 164 km/h"],
+      "coverNote": "motorkářský simulátor",
+      "cta": "Otevřít Apex Ryde ↗",
+      "hrefLabel": "apex-ryder"
+    }
+  }
+}
