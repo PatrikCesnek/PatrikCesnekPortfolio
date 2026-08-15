@@ -1,0 +1,44 @@
+/* Values this design uses that are NOT Nocturne tokens — page-level chrome only.
+   Everything else comes from nocturne.css. See the handoff's colour table. */
+
+:root {
+  /* Mono is the design's signature: sans for prose, mono for anything machine-ish. */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --page-bg: radial-gradient(120% 80% at 8% 0%, #1c1f31 0%, #13151f 55%, #0e1018 100%);
+  --body-bg: #101220;
+  --nav-bg: rgba(16, 18, 32, 0.82);
+  --ghost-year: #191c2c;
+  --bezel: linear-gradient(160deg, #2c2f40, #171a27);
+  --placeholder-bg: #14161f;
+  --placeholder-stripe: repeating-linear-gradient(115deg, #1d202e 0 10px, #14161f 10px 20px);
+
+  /* --color-surface at 55% / 45% */
+  --card-fill: rgba(35, 37, 50, 0.55);
+  --lab-fill: rgba(35, 37, 50, 0.45);
+
+  --gutter: 56px;
+  --sticky-top: 104px;
+  --transition: 140ms ease-out;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

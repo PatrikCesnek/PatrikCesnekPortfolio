@@ -1,0 +1,74 @@
+@import './nocturne.css';
+@import './tokens.css';
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--body-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--page-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Every label, kicker, caption, nav item, date, tag and counter. */
+.mono {
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+}
+
+/* Nocturne's .tag is fixed-height; multi-word tags overflow without this. */
+.tag {
+  white-space: nowrap;
+}
+
+/* Clickable cards, rows and ticks are real buttons — reset the chrome, keep the semantics. */
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Skip link — the track and grid sit behind a lot of chrome. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--color-surface);
+  color: var(--color-accent-200);
+  border-radius: var(--radius-md);
+}
+
+.skip-link:focus {
+  left: var(--gutter);
+  top: 10px;
+}
+
+/* The design is dense on purpose; never let a wide element scroll the page sideways. */
+img,
+picture {
+  max-width: 100%;
+}
