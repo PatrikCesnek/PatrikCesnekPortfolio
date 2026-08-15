@@ -110,8 +110,42 @@ describe('hero', () => {
     expect(html).toContain(en.work.owned)
     expect(html).toContain(en.work.notShown)
     for (const note of en.entries['o2-slovakia'].notes) expect(html).toContain(note)
-    // No screenshot ever appears for a job entry.
-    expect(html).not.toContain('<img')
+
+    // The hero itself shows no screenshot for a job entry. Scope to the hero:
+    // it ends where the track begins, and the card grid below legitimately
+    // carries images for the own projects.
+    const trackStart = html.indexOf(`aria-label="${en.work.timeline}"`)
+    expect(trackStart).toBeGreaterThan(-1)
+    expect(html.slice(0, trackStart)).not.toContain('<img')
+  })
+})
+
+describe('work grid', () => {
+  it('lists all nine entries', () => {
+    const html = at('/')
+    for (const e of ENTRIES) expect(html, e.slug).toContain(e.title)
+  })
+
+  it('orders them newest first', () => {
+    const html = at('/')
+    const grid = html.slice(html.indexOf(en.work.gridHeading))
+    const order = ENTRIES.map((e) => e.title).filter((title) => grid.includes(title))
+    const positions = order.map((title) => grid.indexOf(title))
+    // Reverse chronological: each title appears before the one older than it.
+    expect([...positions].sort((a, b) => b - a)).toEqual(positions)
+  })
+
+  it('gives entries without screenshots a striped tile carrying their coverNote', () => {
+    const html = at('/')
+    for (const e of ENTRIES.filter((x) => !x.images)) {
+      expect(html, e.slug).toContain(en.entries[e.slug].coverNote)
+    }
+  })
+
+  it('links every card to its project page', () => {
+    const html = at('/')
+    expect(html).toContain(en.work.gridHeading)
+    for (const e of ENTRIES) expect(html, e.slug).toContain(en.entries[e.slug].short)
   })
 })
 
