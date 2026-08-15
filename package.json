@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "assets": "node scripts/optimize-assets.mjs",
-    "web-cards": "node scripts/build-web-cards.mjs"
+    "web-cards": "node scripts/build-web-cards.mjs",
+    "og-card": "node scripts/build-og-card.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

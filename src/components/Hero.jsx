@@ -39,11 +39,14 @@ export default function Hero({ entry }) {
           <span className="text-muted">{copy.span}</span>
         </div>
 
-        <h1 className={`anim-up ${s.titleWrap}`} style={{ '--delay': '30ms' }}>
+        {/* h2, not h1: the page's h1 states who this site is about. A heading
+            that changes to "Apex Ryde" as you scrub tells a crawler the
+            homepage is about a motorcycle game. */}
+        <h2 className={`anim-up ${s.titleWrap}`} style={{ '--delay': '30ms' }}>
           <button type="button" className={s.title} onClick={open}>
             {entry.title}
           </button>
-        </h1>
+        </h2>
 
         <p className={`anim-up ${s.lede}`} style={{ '--delay': '60ms' }}>
           {copy.blurb}
