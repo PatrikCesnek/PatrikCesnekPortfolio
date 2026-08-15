@@ -40,6 +40,13 @@ export default function ProjectPage() {
           <a className="btn btn-primary" href={entry.href} target="_blank" rel="noopener">
             {copy.cta}
           </a>
+          {/* Shipped apps have a marketing site of their own alongside the
+              App Store listing. */}
+          {entry.web && (
+            <a className="btn btn-secondary" href={entry.web} target="_blank" rel="noopener">
+              {copy.ctaWeb}
+            </a>
+          )}
           <a
             className={`mono text-muted ${s.hrefLabel}`}
             href={entry.href}

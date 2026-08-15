@@ -90,6 +90,7 @@ const RAW = [
     // Recovered from landmarky-website/index.html — the handoff was still
     // chasing this link.
     href: 'https://apps.apple.com/app/id6772739029',
+    web: 'https://worldwanderer-web.netlify.app/?lang=en#apple-maps',
   },
   {
     t: 2026.4,
@@ -101,6 +102,7 @@ const RAW = [
     tags: ['Swift 6', 'Strict Concurrency', 'SwiftData', 'StoreKit 2', 'Live Activities'],
     images: ['sideq-1', 'sideq-2', 'sideq-3', 'sideq-4', 'sideq-5'],
     href: 'https://apps.apple.com/app/sideq/id6767996805',
+    web: 'https://sidequest-ios.netlify.app/',
   },
   {
     t: 2026.55,
@@ -111,8 +113,9 @@ const RAW = [
     tags: ['Swift', 'SceneKit', 'Physics', 'No dependencies'],
     images: ['apex-1', 'apex-2', 'apex-3'],
     // apex-web still carries a placeholder App Store id, so the app is not
-    // on the Store yet. Keep the existing link until it ships.
-    href: 'https://app.netlify.com/projects/apex-ryder/',
+    // on the Store yet — this points at the live site, not the Netlify
+    // console the handoff had recorded.
+    href: 'https://apex-ryder.netlify.app',
   },
 ]
 

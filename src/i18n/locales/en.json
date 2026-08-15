@@ -5,7 +5,20 @@
     "siteTitle": "Patrik Cesnek — Senior iOS Developer",
     "siteDescription": "Senior iOS developer in Brno. SwiftUI since its first release, full release ownership, and a shelf of my own shipped apps."
   },
-  "months": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+  "months": [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC"
+  ],
   "nav": {
     "work": "WORK",
     "lab": "LAB",
@@ -48,7 +61,7 @@
     "paragraphs": [
       "I've been writing iOS apps since 2019 — SwiftUI from its first release — and shipping my own since before anyone paid me to. That's the part I'd want you to know first: I've owned releases end to end — signing, submission, review, phased rollout, and the crash report that lands at 7am — for years.",
       "Most recently that's meant SwiftUI at product speed — widgets, HealthKit, Live Activities, a centralized error layer so no failure state is a surprise — and before that, owning a design system for an entire client platform, including the Swift tooling that exported its tokens. I like the boring infrastructure that makes everyone else faster, and I like the low-level detail that nobody asked for. Apex Ryde exists because I wanted to know how a friction circle behaves at 40° of lean.",
-      "Outside the editor: motorcycles, the gym, combat sports, and books. I live in Brno, work remotely, and speak Slovak, Czech and English."
+      "Outside the editor: motorcycles, the gym, travelling, and books. I live in Brno, work remotely, and speak Slovak, Czech and English."
     ],
     "portraitAlt": "Patrik Cesnek",
     "portraitCaption": "Pompeii, somewhere between two ruins",
@@ -59,7 +72,11 @@
     "download": "DOWNLOAD PDF",
     "education": "EDUCATION",
     "school": "Stredná odborná škola Ivanka pri Dunaji",
-    "schoolNote": "Agricultural business — cynology · 2013—2017. Not a computer-science degree; the apps are the portfolio."
+    "schoolNote": "Agricultural business — cynology · 2013—2017. Not a computer-science degree; the apps are the portfolio.",
+    "alongside": "ALONGSIDE",
+    "alongsideRole": "Dive Base Manager — Wobbegong Beach Dive Club",
+    "alongsideSpan": "JUNE 2016 — SEP 2021",
+    "alongsideNote": "Senec, Slovakia. The independent iOS work above ran alongside this, not instead of it — the apps were built on evenings and in the off-season while I held a full-time job."
   },
   "footer": {
     "identity": "PATRIK CESNEK · SENIOR iOS DEVELOPER · BRNO, CZ",
@@ -183,10 +200,15 @@
       "short": "A travel app on the App Store, with its own site.",
       "blurb": "A travel app on the App Store, with its own site. Maps, places, and the parts of a trip you actually want to keep.",
       "notes": [],
-      "captions": ["my places", "landmarks on the map", "profile & badges"],
+      "captions": [
+        "my places",
+        "landmarks on the map",
+        "profile & badges"
+      ],
       "coverNote": "travel app",
       "cta": "Open Worldwanderer ↗",
-      "hrefLabel": "App Store · worldwanderer-web.netlify.app"
+      "hrefLabel": "App Store · worldwanderer-web.netlify.app",
+      "ctaWeb": "Open Worldwanderer web ↗"
     },
     "sideq": {
       "span": "SHIPPED 2026 — ONGOING",
@@ -202,17 +224,22 @@
       ],
       "coverNote": "quest app",
       "cta": "Open SideQ ↗",
-      "hrefLabel": "App Store · sidequest-ios.netlify.app"
+      "hrefLabel": "App Store · sidequest-ios.netlify.app",
+      "ctaWeb": "Open SideQ web ↗"
     },
     "apex-ryde": {
       "span": "BUILT IN ONE TRAIN RIDE",
       "short": "A motorcycle simulator with a real gearbox and a friction-circle tire model.",
       "blurb": "A first-person iOS motorcycle simulator: friction-circle tire model, a real 1-N-2-3-4-5-6 sequential gearbox, quickshifter ignition-cut timing, wheelie mechanics. Zero third-party dependencies.",
       "notes": [],
-      "captions": ["difficulty select", "third gear · 124 km/h", "40° lean · 164 km/h"],
+      "captions": [
+        "difficulty select",
+        "third gear · 124 km/h",
+        "40° lean · 164 km/h"
+      ],
       "coverNote": "motorcycle sim",
       "cta": "Open Apex Ryde ↗",
-      "hrefLabel": "apex-ryder"
+      "hrefLabel": "apex-ryder.netlify.app"
     }
   }
 }
