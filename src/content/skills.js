@@ -30,6 +30,7 @@ export const SKILL_ITEMS = [
     'Firebase Analytics',
     'MetricKit',
     'GitHub Actions',
+    'CI/CD',
     'Swift Testing',
   ],
   [

@@ -48,7 +48,17 @@ const RAW = [
     date: '2023-11',
     title: 'Freelance',
     kind: 'job',
-    tags: ['Firestore', 'Auth', 'Cloud Messaging', 'SQLite', 'MongoDB', 'Analytics'],
+    tags: [
+      'Firestore',
+      'Auth',
+      'Cloud Messaging',
+      'SQLite',
+      'MongoDB',
+      'Analytics',
+      'CI/CD',
+      'React',
+      'JavaScript',
+    ],
     href: 'mailto:pcesnek290@gmail.com',
   },
   {
@@ -75,7 +85,7 @@ const RAW = [
     date: '2026-01',
     title: 'FormCoach',
     kind: 'job',
-    tags: ['SwiftUI', 'WidgetKit', 'HealthKit', 'Live Activities', 'MVVM'],
+    tags: ['SwiftUI', 'WidgetKit', 'HealthKit', 'Live Activities', 'MVVM', 'CI/CD'],
     href: 'mailto:pcesnek290@gmail.com',
   },
   {

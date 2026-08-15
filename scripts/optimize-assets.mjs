@@ -73,13 +73,24 @@ for (const file of files) {
 
 await writeFile('src/assets/manifest.json', JSON.stringify(manifest, null, 2) + '\n')
 
+// The committed PDF is the source of truth — it has already been reviewed and
+// shipped. Copying blindly from a local folder would silently replace a
+// corrected CV with whatever stale export happens to sit there, so this only
+// runs when the destination is missing or CV_PDF is passed explicitly.
 await mkdir('public/cv', { recursive: true })
-try {
-  await access(CV_SRC)
-  await copyFile(CV_SRC, 'public/cv/Patrik_Cesnek_CV.pdf')
-  console.log('copied CV PDF')
-} catch {
-  console.warn(`! CV PDF not found at ${CV_SRC} — the CV page will 404 on download`)
+const CV_DEST = 'public/cv/Patrik_Cesnek_CV.pdf'
+const cvExists = await access(CV_DEST).then(() => true, () => false)
+
+if (cvExists && !process.env.CV_PDF) {
+  console.log('CV PDF already present — leaving it alone (pass CV_PDF= to replace)')
+} else {
+  try {
+    await access(CV_SRC)
+    await copyFile(CV_SRC, CV_DEST)
+    console.log(`copied CV PDF from ${CV_SRC}`)
+  } catch {
+    console.warn(`! CV PDF not found at ${CV_SRC} — the CV page will 404 on download`)
+  }
 }
 
 console.log(`optimised ${files.length} images into ${written} derivatives`)
