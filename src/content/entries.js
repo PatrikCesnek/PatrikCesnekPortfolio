@@ -30,7 +30,16 @@ const RAW = [
     date: '2022-02',
     title: 'Matee',
     kind: 'job',
-    tags: ['SwiftUI', 'Kotlin Multiplatform', 'Compose MP', 'XCTest', 'Crashlytics'],
+    tags: [
+      'SwiftUI',
+      'RxSwift',
+      'Combine',
+      'MVI + Clean Architecture',
+      'Kotlin Multiplatform',
+      'Compose MP',
+      'XCTest',
+      'Crashlytics',
+    ],
     href: 'mailto:pcesnek290@gmail.com',
   },
   {
@@ -48,7 +57,7 @@ const RAW = [
     date: '2024-09',
     title: 'Billdu',
     kind: 'job',
-    tags: ['Swift', 'MVVM', 'SQLite', 'REST'],
+    tags: ['Objective-C → Swift', 'MVC → MVVM', 'Swift', 'SQLite', 'REST'],
     href: 'mailto:pcesnek290@gmail.com',
   },
   {

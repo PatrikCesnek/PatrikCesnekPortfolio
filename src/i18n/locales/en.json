@@ -108,11 +108,12 @@
     },
     "matee": {
       "span": "FEB 2022 — NOV 2023",
-      "short": "Legacy internal codebase rewritten into SwiftUI, plus a KMP shared layer.",
-      "blurb": "Rewrote a legacy internal codebase into modern SwiftUI, built the new views and set up automated UI tests. Two years on a Kotlin Multiplatform shared layer, six months of early Compose Multiplatform.",
+      "short": "Legacy UIKit rewritten into SwiftUI on MVI + Clean Architecture, plus a KMP shared layer.",
+      "blurb": "Rewrote a legacy internal codebase into modern SwiftUI on MVI and Clean Architecture, built the new views and set up automated UI tests. Moved the reactive layer from RxSwift to Combine along the way. Two years on a Kotlin Multiplatform shared layer, six months of early Compose Multiplatform.",
       "notes": [
-        "Legacy UIKit → SwiftUI rewrite",
-        "~2 yrs on the KMP shared layer",
+        "Legacy UIKit → SwiftUI rewrite on MVI + Clean Architecture",
+        "RxSwift → Combine migration",
+        "~2 yrs on the KMP shared layer, plus Compose MP",
         "Crash and event data drove the fix order"
       ],
       "captions": [],
@@ -136,10 +137,11 @@
     },
     "billdu": {
       "span": "SEP 2024 — FEB 2025",
-      "short": "Invoicing, scheduling and messaging apps for small businesses.",
-      "blurb": "Several apps helping small businesses invoice, schedule and talk to their customers. REST, local persistence in SQLite, MVVM throughout.",
+      "short": "Invoicing and scheduling apps, migrated from Objective-C and MVC to Swift and MVVM.",
+      "blurb": "Several apps helping small businesses invoice, schedule and talk to their customers — inherited as Objective-C on MVC and migrated to Swift on MVVM, screen by screen, while the apps kept shipping. REST, local persistence in SQLite.",
       "notes": [
-        "Multiple shipping apps",
+        "Objective-C → Swift migration",
+        "MVC → MVVM rearchitecture, done incrementally",
         "Offline-first SQLite persistence",
         "Invoicing, scheduling, messaging"
       ],
