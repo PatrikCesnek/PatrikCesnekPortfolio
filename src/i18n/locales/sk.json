@@ -108,11 +108,12 @@
     },
     "matee": {
       "span": "FEB 2022 — NOV 2023",
-      "short": "Prepis zastaranej internej codebase do SwiftUI a zdieľaná KMP vrstva.",
-      "blurb": "Prepísal som zastaranú internú codebase do moderného SwiftUI, postavil nové obrazovky a nastavil automatizované UI testy. Dva roky na zdieľanej vrstve v Kotlin Multiplatform, pol roka raného Compose Multiplatform.",
+      "short": "Prepis starého UIKitu do SwiftUI na MVI + Clean Architecture a zdieľaná KMP vrstva.",
+      "blurb": "Prepísal som zastaranú internú codebase do moderného SwiftUI nad MVI a Clean Architecture, postavil nové obrazovky a nastavil automatizované UI testy. Cestou som previedol reaktívnu vrstvu z RxSwiftu na Combine. Dva roky na zdieľanej vrstve v Kotlin Multiplatform, pol roka raného Compose Multiplatform.",
       "notes": [
-        "Prepis zo starého UIKitu do SwiftUI",
-        "~2 roky na zdieľanej KMP vrstve",
+        "Prepis zo starého UIKitu do SwiftUI na MVI + Clean Architecture",
+        "Migrácia z RxSwiftu na Combine",
+        "~2 roky na zdieľanej KMP vrstve, k tomu Compose MP",
         "Poradie opráv určovali crash a event dáta"
       ],
       "captions": [],
@@ -136,10 +137,11 @@
     },
     "billdu": {
       "span": "SEP 2024 — FEB 2025",
-      "short": "Aplikácie na fakturáciu, plánovanie a komunikáciu pre malé firmy.",
-      "blurb": "Niekoľko aplikácií, ktoré malým firmám pomáhajú fakturovať, plánovať a hovoriť so zákazníkmi. REST, lokálna perzistencia v SQLite, MVVM naprieč celou aplikáciou.",
+      "short": "Aplikácie na fakturáciu a plánovanie, prevedené z Objective-C a MVC na Swift a MVVM.",
+      "blurb": "Niekoľko aplikácií, ktoré malým firmám pomáhajú fakturovať, plánovať a hovoriť so zákazníkmi — prevzal som ich v Objective-C nad MVC a previedol ich na Swift nad MVVM, obrazovku po obrazovke, kým aplikácie ďalej vychádzali. REST, lokálna perzistencia v SQLite.",
       "notes": [
-        "Niekoľko vydaných aplikácií",
+        "Migrácia z Objective-C na Swift",
+        "Prearchitektovanie z MVC na MVVM, postupne",
         "Offline-first perzistencia v SQLite",
         "Fakturácia, plánovanie, komunikácia"
       ],
