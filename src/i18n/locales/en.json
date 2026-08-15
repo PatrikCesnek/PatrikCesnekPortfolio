@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "name": "English",
+    "htmlLang": "en",
+    "siteTitle": "Patrik Cesnek — Senior iOS Developer",
+    "siteDescription": "Senior iOS developer in Brno. SwiftUI since its first release, full release ownership, and a shelf of my own shipped apps."
+  },
+  "months": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+  "nav": {
+    "work": "WORK",
+    "lab": "LAB",
+    "about": "ABOUT",
+    "cv": "CV",
+    "contact": "GET IN TOUCH",
+    "role": "SENIOR iOS DEVELOPER · BRNO",
+    "language": "Language",
+    "skip": "Skip to content"
+  },
+  "kind": {
+    "own": "OWN PROJECT",
+    "job": "EMPLOYED",
+    "ownShort": "OWN",
+    "jobShort": "CONTRACT"
+  },
+  "work": {
+    "gridHeading": "Everything, newest first",
+    "openCase": "Open the case →",
+    "trackHint": "DRAG TO SCRUB · {count} ENTRIES · 2019—2026",
+    "trackHintTouch": "SWIPE TO SCRUB · {count} ENTRIES · 2019—2026",
+    "timeline": "Timeline",
+    "owned": "WHAT I OWNED",
+    "notShown": "Client work — described, not shown."
+  },
+  "project": {
+    "back": "← BACK TO THE TIMELINE",
+    "builtWith": "BUILT WITH",
+    "when": "WHEN",
+    "notShownLong": "Client work — described, not shown. Happy to walk through it in a call.",
+    "notFound": "That project does not exist.",
+    "notFoundBack": "← Back to the timeline"
+  },
+  "lab": {
+    "title": "The lab",
+    "lede": "Things I build for the pleasure of understanding how they actually work. No roadmap, no stakeholders — just the part where you find out why a tire loses grip or how a quest engine should feel."
+  },
+  "about": {
+    "title": "Hi — I'm Patrik.",
+    "paragraphs": [
+      "I've been writing iOS apps since 2019 — SwiftUI from its first release — and shipping my own since before anyone paid me to. That's the part I'd want you to know first: I've owned releases end to end — signing, submission, review, phased rollout, and the crash report that lands at 7am — for years.",
+      "Most recently that's meant SwiftUI at product speed — widgets, HealthKit, Live Activities, a centralized error layer so no failure state is a surprise — and before that, owning a design system for an entire client platform, including the Swift tooling that exported its tokens. I like the boring infrastructure that makes everyone else faster, and I like the low-level detail that nobody asked for. Apex Ryde exists because I wanted to know how a friction circle behaves at 40° of lean.",
+      "Outside the editor: motorcycles, the gym, combat sports, and books. I live in Brno, work remotely, and speak Slovak, Czech and English."
+    ],
+    "portraitAlt": "Patrik Cesnek",
+    "portraitCaption": "Pompeii, somewhere between two ruins",
+    "location": "Brno, CZ · remote"
+  },
+  "cv": {
+    "title": "Curriculum",
+    "download": "DOWNLOAD PDF",
+    "education": "EDUCATION",
+    "school": "Stredná odborná škola Ivanka pri Dunaji",
+    "schoolNote": "Agricultural business — cynology · 2013—2017. Not a computer-science degree; the apps are the portfolio."
+  },
+  "footer": {
+    "identity": "PATRIK CESNEK · SENIOR iOS DEVELOPER · BRNO, CZ",
+    "email": "EMAIL"
+  },
+  "skills": [
+    {
+      "group": "SWIFT & APPLE",
+      "note": "SwiftUI since 2019, right after its first release. Swift 6 strict concurrency on my own products before it was required at work."
+    },
+    {
+      "group": "WEB",
+      "note": "Enough front-end to build and ship the marketing sites for my own apps, and to talk to web teams without a translator."
+    },
+    {
+      "group": "CROSS-PLATFORM",
+      "note": "Two years on a shared KMP layer; I read Kotlin comfortably and write the basics."
+    },
+    {
+      "group": "DATA & BACKEND",
+      "note": "Consumed and helped shape the APIs, rather than only calling them."
+    },
+    {
+      "group": "RELEASE & MONITORING",
+      "note": "Full release ownership since 2020: signing, submission, review, phased rollout, then reading the crash and event data and prioritising from it."
+    },
+    {
+      "group": "LOW-LEVEL & SECURITY",
+      "note": "Learning, not professional experience — stated plainly on purpose. It comes from flashing Android devices as a teenager and never losing the habit of taking things apart."
+    }
+  ],
+  "entries": {
+    "independent-ios": {
+      "span": "2019 — FEB 2022",
+      "short": "My own apps, shipped alone, on SwiftUI from its first release.",
+      "blurb": "Where it started: my own apps, built end-to-end. Swift and UIKit first, then SwiftUI from 2019 — right after its first release. Signing, submission, review: I owned the whole thing from the first build onward.",
+      "notes": [
+        "Shipped solo, start to review",
+        "Learned UIKit before SwiftUI existed for it",
+        "Release ownership since day one"
+      ],
+      "captions": [],
+      "coverNote": "early app icon",
+      "cta": "Ask me about it",
+      "hrefLabel": "no public build"
+    },
+    "matee": {
+      "span": "FEB 2022 — NOV 2023",
+      "short": "Legacy internal codebase rewritten into SwiftUI, plus a KMP shared layer.",
+      "blurb": "Rewrote a legacy internal codebase into modern SwiftUI, built the new views and set up automated UI tests. Two years on a Kotlin Multiplatform shared layer, six months of early Compose Multiplatform.",
+      "notes": [
+        "Legacy UIKit → SwiftUI rewrite",
+        "~2 yrs on the KMP shared layer",
+        "Crash and event data drove the fix order"
+      ],
+      "captions": [],
+      "coverNote": "internal product",
+      "cta": "Ask me about it",
+      "hrefLabel": "internal product"
+    },
+    "freelance": {
+      "span": "NOV 2023 — JULY 2024",
+      "short": "Four domains in eight months, including apps with 100k+ users.",
+      "blurb": "Contact management, navigation, e-commerce and internal tooling — including consumer apps with hundreds of thousands of users. Consumed and helped shape the REST APIs behind them.",
+      "notes": [
+        "Apps with 100k+ users",
+        "Firebase back ends end to end",
+        "Four domains in eight months"
+      ],
+      "captions": [],
+      "coverNote": "client work",
+      "cta": "Ask me about it",
+      "hrefLabel": "client work"
+    },
+    "billdu": {
+      "span": "SEP 2024 — FEB 2025",
+      "short": "Invoicing, scheduling and messaging apps for small businesses.",
+      "blurb": "Several apps helping small businesses invoice, schedule and talk to their customers. REST, local persistence in SQLite, MVVM throughout.",
+      "notes": [
+        "Multiple shipping apps",
+        "Offline-first SQLite persistence",
+        "Invoicing, scheduling, messaging"
+      ],
+      "captions": [],
+      "coverNote": "client product",
+      "cta": "Ask me about it",
+      "hrefLabel": "client product"
+    },
+    "o2-slovakia": {
+      "span": "JUNE 2025 — JAN 2026",
+      "short": "Sole owner of a platform design system, plus the Swift tooling behind its tokens.",
+      "blurb": "Owned the design system for the whole O2 client platform under very high code-quality standards. Wrote a Swift script that handles and exports design tokens, plus UI and unit tests for both packages — it measurably changed how the rest of the mobile team worked.",
+      "notes": [
+        "Sole owner of the platform design system",
+        "Swift token export pipeline",
+        "UI and unit tests across two packages"
+      ],
+      "captions": [],
+      "coverNote": "client platform",
+      "cta": "Ask me about it",
+      "hrefLabel": "client platform"
+    },
+    "formcoach": {
+      "span": "JAN 2026 — NOW",
+      "short": "SwiftUI fitness app: widgets, HealthKit, Live Activities, one error layer.",
+      "blurb": "Building the FormCoach fitness app in SwiftUI: WidgetKit, HealthKit, Live Activities and full localization, over a centralized error-handling layer that covers every failure state.",
+      "notes": [
+        "Widgets, HealthKit, Live Activities",
+        "One error-handling layer, every failure state",
+        "Current role"
+      ],
+      "captions": [],
+      "coverNote": "current role",
+      "cta": "Ask me about it",
+      "hrefLabel": "current role"
+    },
+    "worldwanderer": {
+      "span": "SHIPPED 2026",
+      "short": "A travel app on the App Store, with its own site.",
+      "blurb": "A travel app on the App Store, with its own site. Maps, places, and the parts of a trip you actually want to keep.",
+      "notes": [],
+      "captions": ["my places", "landmarks on the map", "profile & badges"],
+      "coverNote": "travel app",
+      "cta": "Open Worldwanderer ↗",
+      "hrefLabel": "App Store · worldwanderer-web.netlify.app"
+    },
+    "sideq": {
+      "span": "SHIPPED 2026 — ONGOING",
+      "short": "Real-world quests. Swift 6, strict concurrency, five local packages.",
+      "blurb": "Real-world quests for people who want a push out the door. Swift 6 with strict concurrency, five local SPM packages, SwiftData and StoreKit 2 — shipped iteratively, with a full social release and German localization.",
+      "notes": [],
+      "captions": [
+        "quest of the day",
+        "quest in progress",
+        "complete + achievements",
+        "your sidequests",
+        "stats"
+      ],
+      "coverNote": "quest app",
+      "cta": "Open SideQ ↗",
+      "hrefLabel": "App Store · sidequest-ios.netlify.app"
+    },
+    "apex-ryde": {
+      "span": "BUILT IN ONE TRAIN RIDE",
+      "short": "A motorcycle simulator with a real gearbox and a friction-circle tire model.",
+      "blurb": "A first-person iOS motorcycle simulator: friction-circle tire model, a real 1-N-2-3-4-5-6 sequential gearbox, quickshifter ignition-cut timing, wheelie mechanics. Zero third-party dependencies.",
+      "notes": [],
+      "captions": ["difficulty select", "third gear · 124 km/h", "40° lean · 164 km/h"],
+      "coverNote": "motorcycle sim",
+      "cta": "Open Apex Ryde ↗",
+      "hrefLabel": "apex-ryder"
+    }
+  }
+}
