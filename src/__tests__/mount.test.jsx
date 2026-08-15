@@ -1,7 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { createRoot } from 'react-dom/client'
 import { act } from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
 import { BrowserRouter } from 'react-router-dom'
+import { StaticRouter } from 'react-router-dom/server'
 import App from '../App.jsx'
 import { ENTRIES } from '../content/entries.js'
 
@@ -67,6 +69,18 @@ describe('client mount', () => {
       expect(container.querySelector('main'), path).not.toBeNull()
       expect(errors, path).toEqual([])
     }
+  })
+
+  it('reveals cards rather than leaving them invisible without JS', async () => {
+    await mount()
+    // Server-rendered markup must carry no reveal state at all, so a crawler
+    // or a no-JS visitor sees plain visible content.
+    const ssr = renderToStaticMarkup(
+      <StaticRouter location="/">
+        <App />
+      </StaticRouter>
+    )
+    expect(ssr).not.toContain('data-reveal="pending"')
   })
 
   it('mounts every project page cleanly', async () => {

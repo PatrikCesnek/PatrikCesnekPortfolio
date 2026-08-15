@@ -72,7 +72,7 @@ export default function ScrubTrack({ activeIndex, onChange }) {
       <div className={s.viewport}>
         <div
           ref={ref}
-          className={s.track}
+          className={`${s.track} ${dragging ? s.dragging : ''}`}
           role="slider"
           tabIndex={0}
           aria-valuemin={0}

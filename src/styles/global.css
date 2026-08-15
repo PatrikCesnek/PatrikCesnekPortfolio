@@ -1,5 +1,6 @@
 @import './nocturne.css';
 @import './tokens.css';
+@import './motion.css';
 
 html {
   scroll-behavior: smooth;
@@ -17,6 +18,15 @@ body {
   background: var(--page-bg);
   display: flex;
   flex-direction: column;
+}
+
+/* The route wrapper sits between #root's flex column and the page, so it has
+   to pass the growth through or the footer floats up on short pages. */
+.route {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 main {

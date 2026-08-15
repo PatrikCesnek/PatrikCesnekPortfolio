@@ -1,21 +1,26 @@
 import { useNavigate } from 'react-router-dom'
 import { useLocale } from '../i18n/index.js'
 import { useLocalePath } from '../hooks/useLocalePath.js'
+import { useReveal } from '../hooks/useReveal.js'
 import Picture from './Picture.jsx'
 import PlaceholderTile from './PlaceholderTile.jsx'
 import s from './LabRow.module.css'
 
-export default function LabRow({ entry }) {
+export default function LabRow({ entry, index = 0 }) {
   const { tEntry } = useLocale()
   const lp = useLocalePath()
   const navigate = useNavigate()
+  const [ref, reveal] = useReveal()
 
   const copy = tEntry(entry.slug)
 
   return (
     <button
+      ref={ref}
       type="button"
-      className={s.row}
+      className={`reveal ${s.row}`}
+      data-reveal={reveal ?? undefined}
+      style={{ '--delay': `${Math.min(index, 5) * 55}ms` }}
       onClick={() => navigate(lp(`/projects/${entry.slug}`))}
     >
       <span className={s.cover}>

@@ -36,14 +36,18 @@ export default function App() {
       <ScrollToTop />
       <LocaleRedirect />
       <Nav />
-      <Routes>
-        {PREFIXED.map((l) => (
-          <Route key={l} path={`/${l}`}>
-            {pages}
-          </Route>
-        ))}
-        <Route path="/">{pages}</Route>
-      </Routes>
+      {/* Keyed on the path so each navigation crossfades. The hash is not
+          part of the key — scrubbing the hero must not refade the page. */}
+      <div key={pathname} className="anim-fade route">
+        <Routes>
+          {PREFIXED.map((l) => (
+            <Route key={l} path={`/${l}`}>
+              {pages}
+            </Route>
+          ))}
+          <Route path="/">{pages}</Route>
+        </Routes>
+      </div>
       <Footer />
     </LocaleProvider>
   )

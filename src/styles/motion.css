@@ -1,0 +1,111 @@
+/**
+ * Motion layer.
+ *
+ * Nocturne is a quiet system, so everything here is short and limited to
+ * opacity and transform — no colour flashes, no layout animation, nothing that
+ * can cause a reflow mid-frame. The handoff asked for an instant hero swap;
+ * Patrik chose to animate it, so the swap is deliberately fast (200-260ms)
+ * and eases out, which reads as "settled into place" rather than "slid in".
+ *
+ * Every rule here is switched off wholesale under prefers-reduced-motion at
+ * the bottom of the file.
+ */
+
+:root {
+  --ease-out: cubic-bezier(0.22, 0.9, 0.28, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+
+  --dur-fast: 160ms;
+  --dur-base: 200ms;
+  --dur-slow: 260ms;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The ghost year travels further because it is enormous — the same 12px
+   would be invisible at 380px type. */
+@keyframes ghost-roll {
+  from {
+    opacity: 0;
+    transform: translate3d(0, calc(-50% + 0.06em), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+/* Utility: an element animates in on mount, offset by its own delay. */
+.anim-up {
+  animation: fade-slide-up var(--dur-base) var(--ease-out) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.anim-scale {
+  animation: fade-scale var(--dur-slow) var(--ease-out) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.anim-fade {
+  animation: fade-in var(--dur-fast) var(--ease-out) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Scroll reveal — the element is hidden until useReveal marks it visible, so
+   it must not start invisible for anyone without JavaScript or IO support. */
+.reveal {
+  opacity: 1;
+}
+
+.reveal[data-reveal='pending'] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+}
+
+.reveal[data-reveal='shown'] {
+  animation: fade-slide-up var(--dur-slow) var(--ease-out) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-up,
+  .anim-scale,
+  .anim-fade,
+  .reveal[data-reveal='shown'] {
+    animation: none;
+  }
+
+  .reveal[data-reveal='pending'] {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -23,27 +23,33 @@ export default function Hero({ entry }) {
 
   return (
     <section className={s.hero}>
-      {/* Decorative — first in source so it sits behind the text column. */}
-      <span className={s.ghost} aria-hidden="true">
+      {/* Decorative — first in source so it sits behind the text column.
+          Keyed on the year so it only re-animates when the year changes,
+          not on every scrub within 2026. */}
+      <span key={entry.year} className={`${s.ghost} ${s.ghostAnim}`} aria-hidden="true">
         {entry.year}
       </span>
 
-      <div className={s.text}>
-        <div className={`mono ${s.kicker}`}>
+      {/* Keyed on the slug: React remounts the column, which restarts the
+          staggered entrance. Cheap, and no animation library needed. */}
+      <div key={entry.slug} className={s.text}>
+        <div className={`mono anim-up ${s.kicker}`}>
           <span className={s.dot} aria-hidden="true" />
           <span className={s.kind}>{t(entry.kind === 'own' ? 'kind.own' : 'kind.job')}</span>
           <span className="text-muted">{copy.span}</span>
         </div>
 
-        <h1 className={s.titleWrap}>
+        <h1 className={`anim-up ${s.titleWrap}`} style={{ '--delay': '30ms' }}>
           <button type="button" className={s.title} onClick={open}>
             {entry.title}
           </button>
         </h1>
 
-        <p className={s.lede}>{copy.blurb}</p>
+        <p className={`anim-up ${s.lede}`} style={{ '--delay': '60ms' }}>
+          {copy.blurb}
+        </p>
 
-        <div className={s.tags}>
+        <div className={`anim-up ${s.tags}`} style={{ '--delay': '90ms' }}>
           {entry.tags.map((tag) => (
             <span key={tag} className="tag tag-outline">
               {tag}
@@ -51,7 +57,7 @@ export default function Hero({ entry }) {
           ))}
         </div>
 
-        <div className={s.actions}>
+        <div className={`anim-up ${s.actions}`} style={{ '--delay': '115ms' }}>
           <Link to={to} className="btn btn-primary">
             {t('work.openCase')}
           </Link>
@@ -66,7 +72,9 @@ export default function Hero({ entry }) {
         </div>
       </div>
 
-      <div className={s.media}>{media}</div>
+      <div key={`${entry.slug}-media`} className={`anim-scale ${s.media}`}>
+        {media}
+      </div>
     </section>
   )
 }
