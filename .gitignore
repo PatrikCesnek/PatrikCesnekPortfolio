@@ -1,0 +1,121 @@
+# ─── Dependencies ───────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+jspm_packages/
+bower_components/
+web_modules/
+
+# ─── Build output ───────────────────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+out/
+.output/
+.vercel/
+.netlify/
+*.local
+
+# ─── Vite / bundler caches ──────────────────────────────────────────────────
+.vite/
+node_modules/.vite/
+.rollup.cache/
+.parcel-cache/
+.cache/
+.turbo/
+.swc/
+*.tsbuildinfo
+
+# ─── Test & coverage ────────────────────────────────────────────────────────
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+vitest.config.*.timestamp*
+
+# ─── Logs ───────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ─── Environment & secrets ──────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+secrets.json
+.secrets/
+
+# ─── Editors & IDEs ─────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.iml
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+.fleet/
+.zed/
+
+# ─── macOS ──────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+Icon?
+
+# ─── Windows / Linux ────────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+.directory
+.Trash-*
+.nfs*
+
+# ─── Tooling ────────────────────────────────────────────────────────────────
+.eslintcache
+.stylelintcache
+.prettiercache
+.npm/
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# ─── Agent / scratch ────────────────────────────────────────────────────────
+.claude/settings.local.json
+.ruflo/
+scratch/
+tmp/
+*.orig
+*.rej
