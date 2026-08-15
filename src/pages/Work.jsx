@@ -29,6 +29,10 @@ export default function Work() {
 
   return (
     <main id="content" className={s.page}>
+      {/* The design gives the hero to the active project, so the page's real
+          subject is stated here for crawlers and screen readers. */}
+      <h1 className="visually-hidden">{t('meta.h1')}</h1>
+
       <Hero entry={ENTRIES[activeIndex]} />
       <ScrubTrack activeIndex={activeIndex} onChange={select} />
 

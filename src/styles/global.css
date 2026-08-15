@@ -60,6 +60,20 @@ a {
   text-decoration: none;
 }
 
+/* Available to screen readers and crawlers, invisible on screen. Used for the
+   page heading the design has no room for. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Skip link — the track and grid sit behind a lot of chrome. */
 .skip-link {
   position: absolute;
