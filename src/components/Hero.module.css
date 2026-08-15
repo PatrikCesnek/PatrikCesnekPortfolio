@@ -1,0 +1,131 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 460px);
+  gap: 56px;
+  align-items: center;
+  min-height: 620px;
+  padding-top: 48px;
+  position: relative;
+}
+
+.ghost {
+  position: absolute;
+  left: -18px;
+  top: 46%;
+  transform: translateY(-50%);
+  font-size: min(380px, 30vw);
+  line-height: 0.8;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--ghost-year);
+  user-select: none;
+  pointer-events: none;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  flex: none;
+}
+
+.kind {
+  color: var(--color-accent-300);
+}
+
+.titleWrap {
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(54px, 6.6vw, 96px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  color: var(--color-text);
+  text-wrap: balance;
+  transition: color var(--transition);
+}
+
+.title:hover {
+  color: var(--color-accent-200);
+}
+
+.lede {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-neutral-300);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hrefLabel {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  transition: color var(--transition);
+}
+
+.hrefLabel:hover {
+  color: var(--color-accent-300);
+}
+
+.media {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+    padding-top: 36px;
+  }
+
+  /* Never designed at this width; the handoff's direction is to drop it. */
+  .ghost {
+    display: none;
+  }
+
+  .media {
+    justify-content: flex-start;
+  }
+
+  .lede {
+    font-size: 18px;
+  }
+}

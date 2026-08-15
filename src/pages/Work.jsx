@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ENTRIES } from '../content/entries.js'
+import Hero from '../components/Hero.jsx'
 import ScrubTrack from '../components/ScrubTrack.jsx'
 import s from './Work.module.css'
 
@@ -22,6 +23,7 @@ export default function Work() {
 
   return (
     <main id="content" className={s.page}>
+      <Hero entry={ENTRIES[activeIndex]} />
       <ScrubTrack activeIndex={activeIndex} onChange={select} />
     </main>
   )

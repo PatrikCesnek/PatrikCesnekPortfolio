@@ -65,6 +65,56 @@ describe('locale routing', () => {
   })
 })
 
+describe('hero', () => {
+  it('opens on the newest entry — Apex Ryde, a landscape project', () => {
+    const html = at('/')
+    expect(html).toContain('Apex Ryde')
+    expect(html).toContain(en.entries['apex-ryde'].blurb)
+    expect(html).toContain(en.entries['apex-ryde'].captions[0])
+  })
+
+  it('renders the ghost year as decorative', () => {
+    expect(at('/')).toMatch(/aria-hidden="true"[^>]*>2026</)
+  })
+
+  it('shows every tag of the active entry', () => {
+    const html = at('/')
+    for (const tag of ['Swift', 'SceneKit', 'Physics', 'No dependencies']) {
+      expect(html).toContain(`>${tag}<`)
+    }
+  })
+
+  it('gives every screenshot real alt text, never an empty one', () => {
+    const html = at('/')
+    const imgs = html.match(/<img[^>]*>/g) ?? []
+    expect(imgs.length).toBeGreaterThan(0)
+    for (const img of imgs) {
+      expect(img).toMatch(/alt="[^"]+"/)
+    }
+  })
+
+  it('serves modern formats ahead of the jpeg fallback', () => {
+    const html = at('/')
+    expect(html).toContain('type="image/avif"')
+    expect(html).toContain('type="image/webp"')
+  })
+
+  it('opens on the entry a hash names', () => {
+    const html = at('/#o2-slovakia')
+    expect(html).toContain('O2 Slovakia')
+    expect(html).toContain(en.entries['o2-slovakia'].blurb)
+  })
+
+  it('describes client work instead of showing it', () => {
+    const html = at('/#o2-slovakia')
+    expect(html).toContain(en.work.owned)
+    expect(html).toContain(en.work.notShown)
+    for (const note of en.entries['o2-slovakia'].notes) expect(html).toContain(note)
+    // No screenshot ever appears for a job entry.
+    expect(html).not.toContain('<img')
+  })
+})
+
 describe('routes', () => {
   it('renders every project slug without throwing', () => {
     for (const e of ENTRIES) {
