@@ -1,0 +1,28 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.item {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--color-neutral-600);
+  transition: color var(--transition);
+}
+
+.item:hover {
+  color: var(--color-accent-300);
+}
+
+.active {
+  color: var(--color-accent-300);
+}
+
+/* A hairline divider between codes, kept solid: this is an in-control
+   separator, not a freestanding rule, so it does not fade. */
+.item + .item {
+  padding-left: 8px;
+  border-left: 1px solid var(--color-neutral-800);
+}
