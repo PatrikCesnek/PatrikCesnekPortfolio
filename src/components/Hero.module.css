@@ -12,7 +12,7 @@
   position: absolute;
   left: -18px;
   top: 46%;
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
   font-size: min(380px, 30vw);
   line-height: 0.8;
   font-weight: 600;
@@ -20,6 +20,16 @@
   color: var(--ghost-year);
   user-select: none;
   pointer-events: none;
+}
+
+.ghostAnim {
+  animation: ghost-roll var(--dur-slow) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghostAnim {
+    animation: none;
+  }
 }
 
 .text {
