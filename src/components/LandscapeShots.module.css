@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 460px;
+  max-width: 100%;
+}
+
+.figure {
+  margin: 0;
+}
+
+.shot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 778 / 360;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.caption {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-neutral-600);
+  margin-top: 6px;
+}
