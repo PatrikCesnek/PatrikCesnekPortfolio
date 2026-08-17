@@ -5,12 +5,29 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Prerendered files mean every URL is a real file on disk. This fallback only
-# catches client-side navigation to paths the prerender did not emit.
+# Prerendering emits a real file for every route, and Netlify serves those
+# before it consults this table — so anything reaching these rules genuinely
+# does not exist. It gets the 404 shell in the language its path asked for,
+# with a real 404 status.
+#
+# The rule these replace sent every unknown URL to /index.html with a 200,
+# which is a soft 404: the visitor got the homepage instead of an answer, and
+# a crawler was told that every typo, every dead inbound link and every probe
+# for /wp-login.php was a valid page worth indexing.
+[[redirects]]
+  from = "/cs/*"
+  to = "/cs/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/sk/*"
+  to = "/sk/404.html"
+  status = 404
+
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/assets/*"

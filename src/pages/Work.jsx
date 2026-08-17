@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ENTRIES } from '../content/entries.js'
 import { useLocale } from '../i18n/index.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import Hero from '../components/Hero.jsx'
 import ScrubTrack from '../components/ScrubTrack.jsx'
 import WorkCard from '../components/WorkCard.jsx'
@@ -13,6 +14,8 @@ const NEWEST_FIRST = [...ENTRIES].reverse()
 export default function Work() {
   const { hash } = useLocation()
   const { t } = useLocale()
+
+  useDocumentTitle(t('meta.siteTitle'))
 
   // The hero opens on the newest entry, unless a hash names one — /#sideq.
   const [activeIndex, setActiveIndex] = useState(() => {

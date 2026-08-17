@@ -1,15 +1,9 @@
 import { NavLink, Link, useLocation } from 'react-router-dom'
+import { NAV_ITEMS } from '../content/nav.js'
 import { useLocale, stripLocale } from '../i18n/index.js'
 import { useLocalePath } from '../hooks/useLocalePath.js'
 import LangSwitcher from './LangSwitcher.jsx'
 import s from './Nav.module.css'
-
-const ITEMS = [
-  ['/', 'work'],
-  ['/lab', 'lab'],
-  ['/about', 'about'],
-  ['/cv', 'cv'],
-]
 
 export default function Nav() {
   const { t } = useLocale()
@@ -32,7 +26,7 @@ export default function Nav() {
       </Link>
 
       <nav className={s.links} aria-label={t('nav.work')}>
-        {ITEMS.map(([path, key]) => (
+        {NAV_ITEMS.map(([path, key]) => (
           <NavLink
             key={key}
             to={lp(path)}

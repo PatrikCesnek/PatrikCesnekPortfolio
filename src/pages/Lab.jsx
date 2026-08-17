@@ -1,6 +1,7 @@
 import { OWN } from '../content/entries.js'
 import { WEB_PROJECTS } from '../content/webProjects.js'
 import { useLocale } from '../i18n/index.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import LabRow from '../components/LabRow.jsx'
 import WebCard from '../components/WebCard.jsx'
 import s from './Lab.module.css'
@@ -10,6 +11,8 @@ const ROWS = [...OWN].reverse()
 
 export default function Lab() {
   const { t } = useLocale()
+
+  useDocumentTitle(t('meta.titleLab'))
 
   return (
     <main id="content" className={s.page}>

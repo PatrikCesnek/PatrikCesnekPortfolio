@@ -1,0 +1,101 @@
+.page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  padding: 72px var(--gutter) 130px;
+  max-width: 1180px;
+  /* The ghost is deliberately wider than the page; without this it would
+     scroll the whole document sideways on a narrow screen. Nothing inside
+     sits near enough to an edge for a focus ring to be clipped. */
+  overflow: hidden;
+}
+
+/* Same treatment as the hero's year — see Hero.module.css. */
+.ghost {
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  font-size: min(340px, 32vw);
+  line-height: 0.8;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--ghost-year);
+  user-select: none;
+  pointer-events: none;
+}
+
+.ghostAnim {
+  animation: ghost-roll var(--dur-slow) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghostAnim {
+    animation: none;
+  }
+}
+
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 620px;
+  min-width: 0;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-300);
+}
+
+.title {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.body {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--color-neutral-300);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Each page composes its own way out; all this owes them is the rhythm. */
+.extras {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+  padding-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    min-height: 0;
+    padding: 48px var(--gutter) 96px;
+  }
+
+  .ghost {
+    /* At 375px the glyph stops being a texture and starts being the page. */
+    display: none;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .body {
+    font-size: 17px;
+  }
+}

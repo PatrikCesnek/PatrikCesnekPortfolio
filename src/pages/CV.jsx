@@ -1,6 +1,7 @@
 import { ENTRIES } from '../content/entries.js'
 import { CV_PDF } from '../assets/manifest.js'
 import { useLocale } from '../i18n/index.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import CVRow from '../components/CVRow.jsx'
 import s from './CV.module.css'
 
@@ -8,6 +9,8 @@ const NEWEST_FIRST = [...ENTRIES].reverse()
 
 export default function CV() {
   const { t } = useLocale()
+
+  useDocumentTitle(t('meta.titleCv'))
 
   return (
     <main id="content" className={s.page}>

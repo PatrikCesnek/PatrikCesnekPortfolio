@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  /* Four buttons wrap into a ragged block at 375px; a column reads cleaner
+     and keeps every tap target the full width of the thumb. */
+  .links {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
