@@ -3,6 +3,7 @@ import { ENTRIES, bySlug, indexOfSlug } from '../content/entries.js'
 import { neighbours } from '../lib/neighbours.js'
 import { useLocale } from '../i18n/index.js'
 import { useLocalePath } from '../hooks/useLocalePath.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import Picture from './../components/Picture.jsx'
 import OwnedNotes from '../components/OwnedNotes.jsx'
 import NotFound from './NotFound.jsx'
@@ -14,7 +15,12 @@ export default function ProjectPage() {
   const { t, tEntry } = useLocale()
   const lp = useLocalePath()
 
-  if (!entry) return <NotFound />
+  // Before the early return, because hooks cannot be conditional — and null
+  // on the 404 branch, so NotFound's own title wins. Child effects run first.
+  useDocumentTitle(entry ? `${entry.title} — ${t('meta.projectTitleSuffix')}` : null)
+
+  // A slug that does not exist is a wrong URL like any other, told precisely.
+  if (!entry) return <NotFound description={t('project.notFound')} />
 
   const copy = tEntry(entry.slug)
   const { prev, next } = neighbours(indexOfSlug(entry.slug), ENTRIES.length)

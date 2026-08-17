@@ -4,6 +4,8 @@ import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import LocaleRedirect from './components/LocaleRedirect.jsx'
+import ErrorBoundary from './components/ErrorBoundary.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 import Work from './pages/Work.jsx'
 import ProjectPage from './pages/ProjectPage.jsx'
 import Lab from './pages/Lab.jsx'
@@ -39,14 +41,20 @@ export default function App() {
       {/* Keyed on the path so each navigation crossfades. The hash is not
           part of the key — scrubbing the hero must not refade the page. */}
       <div key={pathname} className="anim-fade route">
-        <Routes>
-          {PREFIXED.map((l) => (
-            <Route key={l} path={`/${l}`}>
-              {pages}
-            </Route>
-          ))}
-          <Route path="/">{pages}</Route>
-        </Routes>
+        {/* Inside the keyed wrapper and around the routed page only: the nav
+            and the footer stay mounted, so a visitor whose page threw can
+            still click their way out, and that click remounts the boundary
+            clean. Placing it above Nav would trade both away. */}
+        <ErrorBoundary fallback={(error) => <ErrorPage error={error} />}>
+          <Routes>
+            {PREFIXED.map((l) => (
+              <Route key={l} path={`/${l}`}>
+                {pages}
+              </Route>
+            ))}
+            <Route path="/">{pages}</Route>
+          </Routes>
+        </ErrorBoundary>
       </div>
       <Footer />
     </LocaleProvider>

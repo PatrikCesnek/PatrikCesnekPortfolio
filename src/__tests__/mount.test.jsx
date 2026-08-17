@@ -63,6 +63,15 @@ describe('client mount', () => {
     expect(container.textContent).toContain('Apex Ryde')
   })
 
+  it('keeps <html lang> in step with the locale the URL declares', async () => {
+    // A prerendered file carries the right lang, but a language switch never
+    // reloads the document — only this effect keeps the two from drifting.
+    for (const [path, lang] of [['/', 'en'], ['/cs/about', 'cs'], ['/sk/cv', 'sk']]) {
+      await mount(path)
+      expect(document.documentElement.lang, path).toBe(lang)
+    }
+  })
+
   it('mounts every route cleanly', async () => {
     for (const path of ['/lab', '/about', '/cv', '/cs', '/sk/cv']) {
       await mount(path)

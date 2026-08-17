@@ -4,7 +4,8 @@
  * A portfolio link pasted into Slack or LinkedIn must not render as an empty
  * <div id="root">, and recruiters' crawlers do not run JavaScript. This emits
  * 3 locales x 13 routes = 39 files, each with its own title, description,
- * canonical and hreflang set, plus a sitemap.
+ * canonical and hreflang set, plus a 404 shell per locale, a sitemap and
+ * robots.txt.
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
@@ -125,6 +126,36 @@ for (const locale of LOCALES) {
   }
 }
 
+/**
+ * The 404 shell, one per locale.
+ *
+ * Netlify serves the nearest 404.html up the directory tree, with a real 404
+ * status — so /cs/anything gets the Czech one. It is rendered at /404, which
+ * matches no route and therefore renders the NotFound page; the router
+ * re-renders it against the real URL on hydration and reaches the same page.
+ *
+ * No canonical, no hreflang, no sitemap entry, and noindex: this one file
+ * stands in for every URL that does not exist, and a canonical would be an
+ * invitation to index one of them. `follow` still lets a crawler take the
+ * links out of the dead end.
+ */
+for (const locale of LOCALES) {
+  const dict = dicts[locale]
+
+  const head = `<title>${esc(dict.meta.title404)}</title>
+    <meta name="description" content="${esc(dict.meta.desc404)}">
+    <meta name="robots" content="noindex, follow">`
+
+  const out = template
+    .replace('<html lang="en">', `<html lang="${locale}">`)
+    .replace(/<title>[^<]*<\/title>/, head)
+    .replace('<div id="root"></div>', `<div id="root">${render(prefix(locale, '/404'))}</div>`)
+
+  const file = join('dist', locale === DEFAULT_LOCALE ? '404.html' : `${locale}/404.html`)
+  await mkdir(dirname(file), { recursive: true })
+  await writeFile(file, out)
+}
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls
@@ -152,4 +183,6 @@ Sitemap: ${SITE}/sitemap.xml
 `
 )
 
-console.log(`prerendered ${count} routes + sitemap + robots (site: ${SITE})`)
+console.log(
+  `prerendered ${count} routes + ${LOCALES.length} 404 shells + sitemap + robots (site: ${SITE})`
+)

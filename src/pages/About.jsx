@@ -1,4 +1,5 @@
 import { useLocale } from '../i18n/index.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { PORTRAIT } from '../assets/manifest.js'
 import SkillsList from '../components/SkillsList.jsx'
 import s from './About.module.css'
@@ -6,6 +7,8 @@ import s from './About.module.css'
 export default function About() {
   const { t } = useLocale()
   const paragraphs = t('about.paragraphs')
+
+  useDocumentTitle(t('meta.titleAbout'))
 
   return (
     <main id="content" className={s.page}>

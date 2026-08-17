@@ -13,7 +13,10 @@
     "descAbout": "Sedem rokov so Swiftom, SwiftUI od jeho prvého vydania a plná zodpovednosť za releasy. Sídlim v Brne, pracujem remote v rámci EÚ, k dispozícii pre zákazky.",
     "titleCv": "Životopis — Patrik Cesnek, senior iOS vývojár (SwiftUI, Swift 6)",
     "descCv": "Časová os kariéry a životopis na stiahnutie. iOS od roku 2019: SwiftUI, Swift 6, Kotlin Multiplatform, dizajnové systémy, CI/CD a plná zodpovednosť za vydania na App Store.",
-    "projectTitleSuffix": "iOS prípadová štúdia od Patrika Cesneka"
+    "projectTitleSuffix": "iOS prípadová štúdia od Patrika Cesneka",
+    "title404": "Stránka sa nenašla — Patrik Cesnek",
+    "desc404": "Taká adresa na tomto webe neexistuje. Práca, laboratórium, o mne a CV áno.",
+    "titleError": "Niečo sa pokazilo — Patrik Cesnek"
   },
   "months": [
     "JAN",
@@ -59,8 +62,24 @@
     "builtWith": "POSTAVENÉ Z",
     "when": "KEDY",
     "notShownLong": "Klientská práca — opísaná, neukázaná. Rád vás ňou prevediem na hovore.",
-    "notFound": "Taký projekt neexistuje.",
-    "notFoundBack": "← Späť na časovú os"
+    "notFound": "Taký projekt neexistuje."
+  },
+  "notFound": {
+    "kicker": "404 · NENÁJDENÉ",
+    "title": "Táto stránka neexistuje.",
+    "body": "Odkaz je buď zastaraný, alebo nikdy nebol správny. Sú tu len štyri stránky — jedna z nich je pravdepodobne tá, ktorú ste hľadali.",
+    "home": "Späť na časovú os",
+    "elsewhere": "Inde na tomto webe"
+  },
+  "error": {
+    "kicker": "CHYBA · NIEČO SA POKAZILO",
+    "title": "Niečo sa pokazilo na mojej strane.",
+    "body": "Je to chyba tohto webu, nie nič, čo ste urobili vy. Obnovenie stránky to zvyčajne spraví — a ak nie, rád sa o tom dozviem.",
+    "reload": "Obnoviť stránku",
+    "home": "Späť na časovú os",
+    "report": "DAJTE MI VEDIEŤ",
+    "reportSubject": "Rozbitá stránka na vašom portfóliu",
+    "detail": "Technický detail"
   },
   "lab": {
     "title": "Laboratórium",

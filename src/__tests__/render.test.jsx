@@ -396,7 +396,7 @@ describe('routes', () => {
   })
 
   it('renders a 404 for an unknown route', () => {
-    expect(at('/nonsense')).toContain(en.project.notFound)
+    expect(text('/nonsense')).toContain(en.notFound.title)
   })
 
   it('never leaves a raw translation key in the output', () => {
