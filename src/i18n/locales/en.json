@@ -13,7 +13,10 @@
     "descAbout": "Seven years of Swift, SwiftUI since its first release, and full release ownership. Based in Brno, working remotely across the EU, available for contract work.",
     "titleCv": "CV — Patrik Cesnek, Senior iOS Developer (SwiftUI, Swift 6)",
     "descCv": "Career timeline and downloadable CV. iOS since 2019: SwiftUI, Swift 6 strict concurrency, Kotlin Multiplatform, design systems, CI/CD and full App Store release ownership.",
-    "projectTitleSuffix": "iOS case study by Patrik Cesnek"
+    "projectTitleSuffix": "iOS case study by Patrik Cesnek",
+    "title404": "Page not found — Patrik Cesnek",
+    "desc404": "That address does not exist on this site. The work, the lab, the about page and the CV all do.",
+    "titleError": "Something broke — Patrik Cesnek"
   },
   "months": [
     "JAN",
@@ -59,8 +62,24 @@
     "builtWith": "BUILT WITH",
     "when": "WHEN",
     "notShownLong": "Client work — described, not shown. Happy to walk through it in a call.",
-    "notFound": "That project does not exist.",
-    "notFoundBack": "← Back to the timeline"
+    "notFound": "That project does not exist."
+  },
+  "notFound": {
+    "kicker": "404 · NOT FOUND",
+    "title": "This page doesn't exist.",
+    "body": "The link is either out of date or was never right. There are only four pages here — one of them is probably the one you wanted.",
+    "home": "Back to the timeline",
+    "elsewhere": "Elsewhere on this site"
+  },
+  "error": {
+    "kicker": "ERROR · SOMETHING BROKE",
+    "title": "Something broke on my side.",
+    "body": "That's a bug in this site, not anything you did. Reloading usually clears it — and if it doesn't, I'd genuinely like to know.",
+    "reload": "Reload the page",
+    "home": "Back to the timeline",
+    "report": "TELL ME ABOUT IT",
+    "reportSubject": "Something broke on your portfolio",
+    "detail": "Technical detail"
   },
   "lab": {
     "title": "The lab",

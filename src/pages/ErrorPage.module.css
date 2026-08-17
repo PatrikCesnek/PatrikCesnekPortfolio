@@ -1,0 +1,65 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.report {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 2px;
+  transition: color var(--transition);
+}
+
+.report:hover {
+  color: var(--color-accent-300);
+}
+
+.details {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.summary {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-neutral-500);
+  cursor: pointer;
+}
+
+.summary:hover {
+  color: var(--color-neutral-300);
+}
+
+.message {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--card-fill);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-neutral-300);
+  /* A message can be one long unbroken token; it must wrap, not stretch the
+     page, and it must stay scrollable when it cannot wrap. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .actions {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report {
+    align-self: flex-start;
+  }
+}
