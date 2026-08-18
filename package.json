@@ -12,6 +12,7 @@
     "test:watch": "vitest",
     "assets": "node scripts/optimize-assets.mjs",
     "web-cards": "node scripts/build-web-cards.mjs",
+    "app-shots": "node scripts/build-app-shots.mjs",
     "og-card": "node scripts/build-og-card.mjs"
   },
   "dependencies": {

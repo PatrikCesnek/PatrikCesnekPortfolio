@@ -272,6 +272,21 @@
       "coverNote": "motorcycle sim",
       "cta": "Open Apex Ryde ↗",
       "hrefLabel": "apex-ryder.netlify.app"
+    },
+    "reaper": {
+      "span": "BUILT IN A SINGLE NIGHT",
+      "short": "A pixel-art horror game whose every sprite and every note is generated in code.",
+      "blurb": "You play Death on a nightly quota: take only the marked souls before dawn, because reaping a living one costs a heart. Swift 6 under strict concurrency across four local packages, SpriteKit drawing pixel art that ships as no image files at all, and a chiptune score synthesised from square waves at runtime — 129 tests, zero third-party dependencies.",
+      "notes": [],
+      "captions": [
+        "night 1 · reap 5 souls",
+        "a small light in a large night",
+        "the living cost a heart",
+        "records, cloaks, Game Center"
+      ],
+      "coverNote": "pixel horror",
+      "cta": "Open Reaper ↗",
+      "hrefLabel": "reaper-before-dawn.netlify.app"
     }
   },
   "web": {
@@ -280,6 +295,7 @@
     "shotAlt": "The {name} site",
     "sites": {
       "apex": "A landing page for the motorcycle sim, built in the same stretch as the game. Structured data, sitemap, and a page that paints before you notice it.",
+      "reaper": "The support and privacy site the App Store listing points at, drawn in the game's own palette. A light that follows the pointer to restate the game's core mechanic, three languages, and structured data.",
       "sideq": "The product site: five languages switched at runtime, JSON-LD for search, and a straight path from landing to the App Store.",
       "worldwanderer": "Landing, privacy and support pages for the travel app, sharing the app's own visual language and deep-linking into its map."
     }

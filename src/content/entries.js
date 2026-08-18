@@ -127,6 +127,18 @@ const RAW = [
     // console the handoff had recorded.
     href: 'https://apex-ryder.netlify.app',
   },
+  {
+    t: 2026.62,
+    year: '2026',
+    date: '2026-08',
+    title: 'Reaper',
+    kind: 'own',
+    tags: ['Swift 6', 'SpriteKit', 'Strict concurrency', 'Generated art + audio', 'No dependencies'],
+    images: ['reaper-1', 'reaper-2', 'reaper-3', 'reaper-4'],
+    // Not on the Store yet either, so this points at the game's own site
+    // rather than a placeholder App Store id.
+    href: 'https://reaper-before-dawn.netlify.app',
+  },
 ]
 
 export const ENTRIES = RAW.map((e) => ({ ...e, slug: slugify(e.title) }))
