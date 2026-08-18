@@ -272,6 +272,21 @@
       "coverNote": "motorkársky simulátor",
       "cta": "Otvoriť Apex Ryde ↗",
       "hrefLabel": "apex-ryder.netlify.app"
+    },
+    "reaper": {
+      "span": "POSTAVENÉ POČAS JEDNEJ NOCI",
+      "short": "Pixelová hororová hra, ktorej každý sprite aj každý tón vzniká v kóde.",
+      "blurb": "Hráš za Smrť s nočnou kvótou: pred úsvitom si vezmi len označené duše, lebo zobrať živú ťa stojí srdce. Swift 6 v striktnej konkurencii naprieč štyrmi lokálnymi balíkmi, SpriteKit vykresľujúci pixel art, ktorý neobsahuje ani jeden obrázkový súbor, a chiptune hudba syntetizovaná z obdĺžnikových vĺn za behu — 129 testov, nula knižníc tretích strán.",
+      "notes": [],
+      "captions": [
+        "noc 1 · zožni 5 duší",
+        "malé svetlo vo veľkej noci",
+        "živí ťa stoja srdce",
+        "rekordy, plášte, Game Center"
+      ],
+      "coverNote": "pixelový horor",
+      "cta": "Otvoriť Reaper ↗",
+      "hrefLabel": "reaper-before-dawn.netlify.app"
     }
   },
   "web": {
@@ -280,6 +295,7 @@
     "shotAlt": "Web {name}",
     "sites": {
       "apex": "Landing page pre motorkársky simulátor, vytvorená v rovnakom období ako hra. Štruktúrované dáta, sitemap a stránka, ktorá sa vykreslí skôr, než si to všimnete.",
+      "reaper": "Web s podporou a súkromím, na ktorý odkazuje listing v App Store, v palete samotnej hry. Svetlo sledujúce kurzor zopakuje hlavnú mechaniku hry, tri jazyky a štruktúrované dáta.",
       "sideq": "Produktový web: päť jazykov prepínaných za behu, JSON-LD pre vyhľadávače a priama cesta z landing page na App Store.",
       "worldwanderer": "Landing page, zásady súkromia a podpora pre cestovateľskú aplikáciu, v rovnakom vizuálnom jazyku ako aplikácia sama."
     }

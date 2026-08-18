@@ -1,5 +1,5 @@
 /**
- * The marketing sites shipped for the apps above. All three are hand-written
+ * The marketing sites shipped for the apps above. All of them are hand-written
  * HTML, CSS and JavaScript — no framework, no build step — with JSON-LD
  * structured data, a sitemap and runtime language switching.
  *
@@ -23,6 +23,15 @@ export const WEB_PROJECTS = [
     label: 'sidequest-ios.netlify.app',
     locales: ['EN', 'CS', 'SK', 'DE', 'ES'],
     tags: ['HTML', 'CSS', 'JavaScript', 'JSON-LD', 'SEO', 'Netlify'],
+  },
+  {
+    slug: 'reaper',
+    name: 'Reaper',
+    image: 'web-reaper',
+    href: 'https://reaper-before-dawn.netlify.app',
+    label: 'reaper-before-dawn.netlify.app',
+    locales: ['EN', 'CS', 'SK'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'JSON-LD', 'Netlify'],
   },
   {
     slug: 'worldwanderer',

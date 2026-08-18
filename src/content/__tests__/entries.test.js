@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { ENTRIES, OWN, bySlug, indexOfSlug, T_MIN, T_MAX } from '../entries.js'
 
 describe('ENTRIES', () => {
-  it('holds nine entries ordered oldest first', () => {
-    expect(ENTRIES).toHaveLength(9)
+  it('holds ten entries ordered oldest first', () => {
+    expect(ENTRIES).toHaveLength(10)
     const ts = ENTRIES.map((e) => e.t)
     expect([...ts].sort((a, b) => a - b)).toEqual(ts)
   })
@@ -17,7 +17,7 @@ describe('ENTRIES', () => {
 
   it('gives every entry a unique slug', () => {
     const slugs = ENTRIES.map((e) => e.slug)
-    expect(new Set(slugs).size).toBe(9)
+    expect(new Set(slugs).size).toBe(10)
   })
 
   it('gives every entry a year matching its date', () => {
@@ -37,9 +37,9 @@ describe('ENTRIES', () => {
     }
   })
 
-  it('marks exactly one own project as landscape', () => {
+  it('marks the two landscape-only games as landscape', () => {
     const landscape = OWN.filter((e) => e.images && e.orient !== 'portrait')
-    expect(landscape.map((e) => e.slug)).toEqual(['apex-ryde'])
+    expect(landscape.map((e) => e.slug)).toEqual(['apex-ryde', 'reaper'])
   })
 
   it('points the shipped apps at the App Store', () => {
@@ -49,8 +49,10 @@ describe('ENTRIES', () => {
 
   it('resolves entries by slug', () => {
     expect(bySlug('apex-ryde').title).toBe('Apex Ryde')
+    expect(bySlug('reaper').title).toBe('Reaper')
     expect(bySlug('nope')).toBeUndefined()
     expect(indexOfSlug('apex-ryde')).toBe(8)
+    expect(indexOfSlug('reaper')).toBe(9)
     expect(indexOfSlug('nope')).toBe(-1)
   })
 })
