@@ -42,6 +42,7 @@ const emit = async (name, buffer) => {
 const READY = [
   ['web-sideq', 'sidequest-website/assets/og-home.png'],
   ['web-apex', 'apex-web/assets/og-image.png'],
+  ['web-reaper', 'reaper-web/assets/og-image.png'],
 ]
 
 for (const [name, rel] of READY) {
