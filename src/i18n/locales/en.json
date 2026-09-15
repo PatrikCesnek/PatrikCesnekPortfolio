@@ -286,7 +286,8 @@
       ],
       "coverNote": "pixel horror",
       "cta": "Open Reaper ↗",
-      "hrefLabel": "reaper-before-dawn.netlify.app"
+      "hrefLabel": "App Store · reaper-before-dawn.netlify.app",
+      "ctaWeb": "Open Reaper web ↗"
     }
   },
   "web": {

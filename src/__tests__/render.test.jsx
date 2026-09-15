@@ -191,6 +191,7 @@ describe('project page', () => {
   it('sends the outbound CTA to the App Store for shipped apps', () => {
     expect(at('/projects/sideq')).toContain('https://apps.apple.com/app/sideq/id6767996805')
     expect(at('/projects/worldwanderer')).toContain('https://apps.apple.com/app/id6772739029')
+    expect(at('/projects/reaper')).toContain('https://apps.apple.com/app/reaper-before-dawn/id6802620718')
   })
 
   it('offers a second button to each shipped app’s own site', () => {
@@ -201,6 +202,10 @@ describe('project page', () => {
     const ww = at('/projects/worldwanderer')
     expect(ww).toContain('worldwanderer-web.netlify.app/?lang=en#apple-maps')
     expect(ww).toContain(en.entries.worldwanderer.ctaWeb)
+
+    const reaper = at('/projects/reaper')
+    expect(reaper).toContain('https://reaper-before-dawn.netlify.app')
+    expect(reaper).toContain(en.entries.reaper.ctaWeb)
   })
 
   it('never links to the Netlify admin console', () => {
@@ -209,15 +214,14 @@ describe('project page', () => {
     }
   })
 
-  it('points the two unreleased games at their live sites', () => {
+  it('points the unreleased game at its live site', () => {
     expect(at('/projects/apex-ryde')).toContain('https://apex-ryder.netlify.app')
-    expect(at('/projects/reaper')).toContain('https://reaper-before-dawn.netlify.app')
   })
 
   it('shows a web button only where one exists', () => {
-    // Apex and Reaper have no separate marketing site beyond their own href.
+    // Apex has no separate marketing site beyond its own href.
     const withWeb = ENTRIES.filter((e) => e.web).map((e) => e.slug)
-    expect(withWeb).toEqual(['worldwanderer', 'sideq'])
+    expect(withWeb).toEqual(['worldwanderer', 'sideq', 'reaper'])
   })
 
   it('wraps prev/next around the ends, oldest on the left', () => {
