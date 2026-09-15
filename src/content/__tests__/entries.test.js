@@ -45,6 +45,7 @@ describe('ENTRIES', () => {
   it('points the shipped apps at the App Store', () => {
     expect(bySlug('worldwanderer').href).toContain('apps.apple.com')
     expect(bySlug('sideq').href).toContain('apps.apple.com')
+    expect(bySlug('reaper').href).toContain('apps.apple.com')
   })
 
   it('resolves entries by slug', () => {

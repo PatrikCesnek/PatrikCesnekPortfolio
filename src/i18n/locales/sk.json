@@ -286,7 +286,8 @@
       ],
       "coverNote": "pixelový horor",
       "cta": "Otvoriť Reaper ↗",
-      "hrefLabel": "reaper-before-dawn.netlify.app"
+      "hrefLabel": "App Store · reaper-before-dawn.netlify.app",
+      "ctaWeb": "Otvoriť web Reaper ↗"
     }
   },
   "web": {
