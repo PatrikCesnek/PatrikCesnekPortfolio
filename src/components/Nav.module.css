@@ -60,35 +60,19 @@
   flex: none;
 }
 
+/* Five destinations plus the switcher and the CTA stop fitting on one line
+   well before the phone breakpoint — Czech spends 95px on SPOLUPRÁCE alone.
+   The links drop to their own full-width row here rather than at 600px. */
 @media (max-width: 900px) {
   .nav {
-    gap: 20px;
-  }
-
-  .links {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav {
     flex-wrap: wrap;
-    gap: 12px 16px;
-    padding: 14px var(--gutter);
-  }
-
-  .brand {
-    margin-right: auto;
-  }
-
-  .role {
-    display: none;
+    gap: 12px 20px;
   }
 
   .links {
     order: 3;
     width: 100%;
-    gap: 18px;
+    gap: 20px;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -99,6 +83,21 @@
 
   .link {
     flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 12px 16px;
+    padding: 14px var(--gutter);
+  }
+
+  .role {
+    display: none;
+  }
+
+  .links {
+    gap: 18px;
   }
 
   .cta {

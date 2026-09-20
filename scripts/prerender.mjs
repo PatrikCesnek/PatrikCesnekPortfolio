@@ -3,7 +3,7 @@
  *
  * A portfolio link pasted into Slack or LinkedIn must not render as an empty
  * <div id="root">, and recruiters' crawlers do not run JavaScript. This emits
- * 3 locales x 13 routes = 39 files, each with its own title, description,
+ * 3 locales x 14 routes = 42 files, each with its own title, description,
  * canonical and hreflang set, plus a 404 shell per locale, a sitemap and
  * robots.txt.
  */
@@ -15,6 +15,8 @@ import {
   person,
   website,
   softwareApplication,
+  service,
+  faqPage,
   breadcrumbs,
   graph,
 } from './structured-data.mjs'
@@ -45,7 +47,7 @@ const dicts = Object.fromEntries(
   )
 )
 
-const routes = ['/', '/lab', '/about', '/cv', ...ENTRIES.map((e) => `/projects/${e.slug}`)]
+const routes = ['/', '/lab', '/about', '/cv', '/hire', ...ENTRIES.map((e) => `/projects/${e.slug}`)]
 
 const prefix = (locale, path) =>
   locale === DEFAULT_LOCALE ? path : path === '/' ? `/${locale}` : `/${locale}${path}`
@@ -66,6 +68,7 @@ for (const locale of LOCALES) {
       '/lab': [dict.meta.titleLab, dict.meta.descLab],
       '/about': [dict.meta.titleAbout, dict.meta.descAbout],
       '/cv': [dict.meta.titleCv, dict.meta.descCv],
+      '/hire': [dict.meta.titleHire, dict.meta.descHire],
     }
 
     const [title, description] = entry
@@ -82,6 +85,10 @@ for (const locale of LOCALES) {
         ? { '@type': 'ProfilePage', '@id': `${SITE}${url}#page`, mainEntity: { '@id': `${SITE}/#patrik` } }
         : null,
       person(SITE, dict),
+      // person.makesOffer is a reference, so the offer node it points at has
+      // to travel with it on every page or the @id dangles.
+      service(SITE, dict),
+      route === '/hire' ? faqPage(SITE, dict, url) : null,
       entry && entry.kind === 'own' ? softwareApplication(SITE, dict, entry) : null,
       route !== '/'
         ? breadcrumbs(SITE, (p) => prefix(locale, p), route, entry ? entry.title : title.split(' — ')[0])

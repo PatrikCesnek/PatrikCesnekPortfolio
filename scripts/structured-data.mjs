@@ -48,6 +48,24 @@ const LANGUAGES = [
   { code: 'en', name: 'English' },
 ]
 
+/**
+ * Where the offer is good for.
+ *
+ * "European Union" alone is true but useless: it gives Google nothing to match
+ * against a query that names a city. Cities first, then the countries that
+ * contain them, then the catch-all — a crawler reading this can connect
+ * "freelance iOS developer Brno" to this page without inferring anything.
+ */
+const AREA_SERVED = [
+  { '@type': 'City', name: 'Brno', address: { '@type': 'PostalAddress', addressCountry: 'CZ' } },
+  { '@type': 'City', name: 'Praha', alternateName: 'Prague', address: { '@type': 'PostalAddress', addressCountry: 'CZ' } },
+  { '@type': 'City', name: 'Bratislava', address: { '@type': 'PostalAddress', addressCountry: 'SK' } },
+  { '@type': 'Country', name: 'Czech Republic' },
+  { '@type': 'Country', name: 'Slovakia' },
+  { '@type': 'Place', name: 'European Union' },
+  { '@type': 'Place', name: 'Remote worldwide' },
+]
+
 /** The person behind the site — the entity everything else hangs off. */
 export function person(site, dict) {
   return {
@@ -93,21 +111,59 @@ export function person(site, dict) {
       '@type': 'Demand',
       name: 'Freelance and contract iOS development',
     },
-    makesOffer: {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: 'Freelance iOS development',
-        serviceType: 'iOS application development',
-        description: dict.meta.availability,
-        provider: { '@id': `${site}/#patrik` },
-      },
-      areaServed: [
-        { '@type': 'Place', name: 'European Union' },
-        { '@type': 'Place', name: 'Remote worldwide' },
-      ],
-      availability: 'https://schema.org/InStock',
+    // Occupation carries the city in a field Google reads as a location fact
+    // about the person, which the free-text address alone does not.
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: dict.meta.jobTitle,
+      occupationLocation: AREA_SERVED.filter((a) => a['@type'] === 'City'),
+      skills: SKILLS.join(', '),
     },
+    makesOffer: { '@id': `${site}/#freelance-ios` },
+  }
+}
+
+/** The thing actually being sold, as its own addressable node. */
+export function service(site, dict) {
+  return {
+    '@type': 'Offer',
+    '@id': `${site}/#freelance-ios`,
+    itemOffered: {
+      '@type': 'Service',
+      name: 'Freelance iOS development',
+      serviceType: 'iOS application development',
+      description: dict.meta.availability,
+      provider: { '@id': `${site}/#patrik` },
+      areaServed: AREA_SERVED,
+      availableLanguage: LANGUAGES.map((l) => ({
+        '@type': 'Language',
+        name: l.name,
+        alternateName: l.code,
+      })),
+    },
+    areaServed: AREA_SERVED,
+    availability: 'https://schema.org/InStock',
+  }
+}
+
+/**
+ * The hire page's FAQ.
+ *
+ * Google stopped showing FAQ rich results for ordinary sites in 2023, so this
+ * buys no stars in the SERP. It is here because the answers are the clearest
+ * statement on the site of what is on offer, and because the assistants people
+ * increasingly ask for a developer recommendation read exactly this.
+ */
+export function faqPage(site, dict, url) {
+  return {
+    '@type': 'FAQPage',
+    '@id': `${site}${url}#faq`,
+    inLanguage: dict.meta.htmlLang,
+    mainEntity: dict.hire.faq.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
   }
 }
 

@@ -1,0 +1,200 @@
+.page {
+  padding: 56px var(--gutter) 110px;
+  max-width: 1180px;
+}
+
+.title {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--color-neutral-300);
+  max-width: 680px;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent-300);
+  margin: 0;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  flex: none;
+}
+
+.block {
+  padding-top: 72px;
+}
+
+.heading {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-300);
+  margin: 0 0 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--lab-fill);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+
+.cardBody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-neutral-300);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Counter rather than list-style, so the numeral can carry the accent and the
+   mono face without fighting the marker's own box. */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.step {
+  counter-increment: step;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-divider);
+}
+
+.step::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-300);
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px 40px;
+  max-width: 980px;
+}
+
+.question {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+
+.answer {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-neutral-300);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.cta {
+  margin-top: 96px;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--card-fill);
+  box-shadow: var(--shadow-sm);
+}
+
+.ctaHeading {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+
+.ctaBody {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--color-neutral-300);
+  max-width: 520px;
+  margin: 0 0 24px;
+  text-wrap: pretty;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .lede {
+    font-size: 17px;
+  }
+
+  .block {
+    padding-top: 56px;
+  }
+
+  .grid,
+  .faq {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    margin-top: 72px;
+    padding: 28px 24px;
+  }
+
+  .ctaHeading {
+    font-size: 26px;
+  }
+}

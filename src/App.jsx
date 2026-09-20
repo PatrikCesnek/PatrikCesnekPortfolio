@@ -11,6 +11,7 @@ import ProjectPage from './pages/ProjectPage.jsx'
 import Lab from './pages/Lab.jsx'
 import About from './pages/About.jsx'
 import CV from './pages/CV.jsx'
+import Hire from './pages/Hire.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 /** One route table, mounted at "/" and again under each prefixed locale. */
@@ -21,6 +22,7 @@ const pages = (
     <Route path="lab" element={<Lab />} />
     <Route path="about" element={<About />} />
     <Route path="cv" element={<CV />} />
+    <Route path="hire" element={<Hire />} />
     <Route path="*" element={<NotFound />} />
   </>
 )

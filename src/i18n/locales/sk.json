@@ -2,9 +2,9 @@
   "meta": {
     "name": "Slovenčina",
     "htmlLang": "sk",
-    "siteTitle": "Patrik Cesnek — iOS vývojár na voľnej nohe, remote EÚ",
+    "siteTitle": "Patrik Cesnek — iOS vývojár na voľnej nohe, Brno a remote EÚ",
     "siteDescription": "Senior iOS vývojár k dispozícii pre zákazky a kontrakty, remote v rámci EÚ. SwiftUI od roku 2019, Swift 6 a plná zodpovednosť za vydania aplikácií na App Store.",
-    "h1": "Patrik Cesnek — senior iOS vývojár k dispozícii pre zákazky a kontrakty, remote v rámci EÚ",
+    "h1": "Patrik Cesnek — senior iOS vývojár so sídlom v Brne, k dispozícii pre zákazky a kontrakty remote v rámci EÚ",
     "jobTitle": "Senior iOS vývojár",
     "availability": "K dispozícii pre zákazky a kontrakty · remote v rámci EÚ · otvorený presťahovaniu v rámci EÚ pri dlhodobom projekte",
     "titleLab": "Laboratórium — iOS projekty a landing pages | Patrik Cesnek",
@@ -13,6 +13,8 @@
     "descAbout": "Sedem rokov so Swiftom, SwiftUI od jeho prvého vydania a plná zodpovednosť za releasy. Sídlim v Brne, pracujem remote v rámci EÚ, k dispozícii pre zákazky.",
     "titleCv": "Životopis — Patrik Cesnek, senior iOS vývojár (SwiftUI, Swift 6)",
     "descCv": "Časová os kariéry a životopis na stiahnutie. iOS od roku 2019: SwiftUI, Swift 6, Kotlin Multiplatform, dizajnové systémy, CI/CD a plná zodpovednosť za vydania na App Store.",
+    "titleHire": "iOS vývojár na voľnej nohe — Bratislava, Brno, Praha",
+    "descHire": "Senior iOS vývojár na voľnej nohe — Bratislava, Brno, Praha a remote v rámci EÚ. SwiftUI, Swift 6, plná zodpovednosť za vydania na App Store. Aktuálne voľný.",
     "projectTitleSuffix": "iOS prípadová štúdia od Patrika Cesneka",
     "title404": "Stránka sa nenašla — Patrik Cesnek",
     "desc404": "Taká adresa na tomto webe neexistuje. Práca, laboratórium, o mne a CV áno.",
@@ -37,6 +39,7 @@
     "lab": "LABORATÓRIUM",
     "about": "O MNE",
     "cv": "CV",
+    "hire": "SPOLUPRÁCA",
     "contact": "OZVITE SA",
     "role": "SENIOR iOS VÝVOJÁR · BRNO",
     "language": "Jazyk",
@@ -106,6 +109,106 @@
     "alongsideRole": "Vedúci potápačskej základne — Wobbegong Beach Dive Club",
     "alongsideSpan": "JÚN 2016 — SEP 2021",
     "alongsideNote": "Senec, Slovensko. Nezávislá iOS práca vyššie bežala popri tomto, nie namiesto toho — aplikácie vznikali po večeroch a mimo sezóny, kým som mal prácu na plný úväzok."
+  },
+  "hire": {
+    "title": "iOS vývojár na voľnej nohe",
+    "lede": "Som Patrik — senior iOS vývojár so sídlom v Brne. Spolupracujem s tímami v Bratislave, Brne a Prahe a na diaľku v rámci celej EÚ. Sedem rokov so Swiftom, SwiftUI od jeho prvého vydania a aplikácie na App Store, ktoré som sám vydal a spravujem.",
+    "status": "Aktuálne voľný pre zákazky a kontrakty — od dvojtýždňovej opravy po dlhodobú spoluprácu.",
+    "servicesHeading": "Čo beriem",
+    "services": [
+      {
+        "name": "Nová iOS aplikácia od nuly",
+        "body": "Od zadania po listing na App Store. SwiftUI, Swift 6 so striktnou konkurenciou, SwiftData, StoreKit 2 — a nakoniec samotné vydanie, čo je časť, ktorú väčšina ponúk vynechá."
+      },
+      {
+        "name": "Prevzatie existujúceho kódu",
+        "body": "Niekto vám aplikáciu napísal a odišiel. Prečítam si ju, poviem vám na rovinu, v akom je stave, a prevezmem ju — vrátane Objective-C a UIKitu, na ktoré sa nikomu nechce siahať."
+      },
+      {
+        "name": "Z UIKitu do SwiftUI, postupne",
+        "body": "Obrazovku po obrazovke, s priebežným vydávaním. Žiadne prepisovanie, ktoré trvá rok a nikdy sa nedokončí."
+      },
+      {
+        "name": "Zodpovednosť za vydanie",
+        "body": "Podpisovanie, App Store Connect, TestFlight, postupný rollout a crash report o siedmej ráno. Toto si vediem od začiatku do konca od roku 2019."
+      },
+      {
+        "name": "Dizajnový systém, ktorý vydrží",
+        "body": "Jeden som vlastnil pre celú klientsku platformu vrátane Swift nástrojov, ktoré exportovali jeho tokeny. Komponenty, tokeny a pipeline, ktorá drží dizajn a kód v súlade."
+      },
+      {
+        "name": "Widgety, Live Activities, HealthKit",
+        "body": "Systémové integrácie, ktoré na roadmape vyzerajú malé a v praxi zaberú štrnásť dní."
+      }
+    ],
+    "whereHeading": "Kde pracujem",
+    "cities": [
+      {
+        "name": "Bratislava",
+        "body": "Slovenčina je môj rodný jazyk a strávil som dva roky v O2 Slovakia. Viem, ako tam funguje trh aj fakturácia."
+      },
+      {
+        "name": "Brno",
+        "body": "Tu bývam. Osobný kickoff, workshop na mieste alebo káva, než čokoľvek podpíšeme."
+      },
+      {
+        "name": "Praha",
+        "body": "Dve a pol hodiny vlakom. Pravidelné dni na mieste fungujú a s pražskými tímami som odjakživa išiel remote-first."
+      },
+      {
+        "name": "Remote, v rámci EÚ",
+        "body": "Väčšina mojej práce je vzdialená a vždy bola. Prekrývajúce sa hodiny, písané reporty a demo, ktoré si naozaj otvoríte."
+      }
+    ],
+    "processHeading": "Ako to začína",
+    "process": [
+      {
+        "name": "Napíšete",
+        "body": "Stačí odsek. Čo aplikácia robí, v akom je stave a dokedy to potrebujete."
+      },
+      {
+        "name": "Pol hodiny si zavoláme",
+        "body": "Zadarmo. Poviem vám, či nie som ten správny človek — to sa stáva a ušetrí to nám obom mesiac."
+      },
+      {
+        "name": "Dostanete rozsah a číslo",
+        "body": "Fixná cena pri definovanej práci, denná sadzba pri otvorenej. Žiadny paušál, ktorý sa nedá vypovedať."
+      }
+    ],
+    "faqHeading": "Na čo sa ma pýtate",
+    "faq": [
+      {
+        "q": "Pracujete na diaľku?",
+        "a": "Áno — väčšina mojej práce vždy bola vzdialená. Som v Brne, takže slovenské a české hodiny sa kryjú úplne a zvyšok EÚ je hodinu dve od nás."
+      },
+      {
+        "q": "Prevezmete aplikáciu, ktorú písal niekto iný?",
+        "a": "Áno, a je to veľká časť toho, čo robím. Najprv si kód prečítam a dám vám úprimné zhodnotenie, než sa ktokoľvek z nás zaviaže — vrátane toho, keď znie, že sa to musí prepísať."
+      },
+      {
+        "q": "Fixná cena, alebo denná sadzba?",
+        "a": "Oboje. Fixná cena, keď je rozsah naozaj definovaný, denná sadzba, keď nie je. Radšej ponúknem dennú sadzbu, než by som predstieral, že nejasný rozsah je pevné číslo."
+      },
+      {
+        "q": "Ako rýchlo môžete začať?",
+        "a": "Zvyčajne do týždňa dvoch. Malá, dobre definovaná práca často skôr — opýtajte sa."
+      },
+      {
+        "q": "Riešite aj vydanie na App Store?",
+        "a": "Áno. Podpisovanie, App Store Connect, TestFlight, review, postupný rollout a čokoľvek sa vráti od Applu. Vydania si vediem od začiatku do konca od roku 2019."
+      },
+      {
+        "q": "V akých jazykoch pracujete?",
+        "a": "Slovensky, česky a anglicky — všetkými plynulo, písomne aj na hovoroch."
+      },
+      {
+        "q": "Robíte aj Android?",
+        "a": "Samostatne nie. Vydal som Kotlin Multiplatform a Compose Multiplatform nad zdieľaným kódom, takže business logiku prenesiem — ale ak chcete natívnu Android aplikáciu, najmite si Android vývojára."
+      }
+    ],
+    "ctaHeading": "Napíšte mi, čo staviate",
+    "ctaBody": "Odsek, odkaz na App Store alebo repo. Čo je vám najpohodlnejšie.",
+    "ctaButton": "Napísať e-mail"
   },
   "footer": {
     "identity": "PATRIK CESNEK · SENIOR iOS VÝVOJÁR · BRNO, ČR",

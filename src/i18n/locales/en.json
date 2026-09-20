@@ -2,9 +2,9 @@
   "meta": {
     "name": "English",
     "htmlLang": "en",
-    "siteTitle": "Patrik Cesnek — Freelance iOS Developer, Remote EU",
+    "siteTitle": "Patrik Cesnek — Freelance iOS Developer in Brno, Remote EU",
     "siteDescription": "Senior iOS developer available for freelance and contract work, remote across the EU. SwiftUI since 2019, Swift 6, and full release ownership on shipped App Store apps.",
-    "h1": "Patrik Cesnek — senior iOS developer available for freelance and contract work, remote across the EU",
+    "h1": "Patrik Cesnek — senior iOS developer based in Brno, available for freelance and contract work remotely across the EU",
     "jobTitle": "Senior iOS Developer",
     "availability": "Available for freelance and contract work · remote across the EU · open to relocation within the EU for the right long-term project",
     "titleLab": "The Lab — iOS side projects and landing pages | Patrik Cesnek",
@@ -13,6 +13,8 @@
     "descAbout": "Seven years of Swift, SwiftUI since its first release, and full release ownership. Based in Brno, working remotely across the EU, available for contract work.",
     "titleCv": "CV — Patrik Cesnek, Senior iOS Developer (SwiftUI, Swift 6)",
     "descCv": "Career timeline and downloadable CV. iOS since 2019: SwiftUI, Swift 6 strict concurrency, Kotlin Multiplatform, design systems, CI/CD and full App Store release ownership.",
+    "titleHire": "Hire a Freelance iOS Developer — Brno, Praha, Bratislava",
+    "descHire": "Senior freelance iOS developer for hire in Brno, Prague, Bratislava and remote across the EU. SwiftUI, Swift 6, full App Store release ownership. Available now.",
     "projectTitleSuffix": "iOS case study by Patrik Cesnek",
     "title404": "Page not found — Patrik Cesnek",
     "desc404": "That address does not exist on this site. The work, the lab, the about page and the CV all do.",
@@ -37,6 +39,7 @@
     "lab": "LAB",
     "about": "ABOUT",
     "cv": "CV",
+    "hire": "HIRE",
     "contact": "GET IN TOUCH",
     "role": "SENIOR iOS DEVELOPER · BRNO",
     "language": "Language",
@@ -106,6 +109,106 @@
     "alongsideRole": "Dive Base Manager — Wobbegong Beach Dive Club",
     "alongsideSpan": "JUNE 2016 — SEP 2021",
     "alongsideNote": "Senec, Slovakia. The independent iOS work above ran alongside this, not instead of it — the apps were built on evenings and in the off-season while I held a full-time job."
+  },
+  "hire": {
+    "title": "Freelance iOS developer for hire",
+    "lede": "I'm Patrik — a senior iOS developer based in Brno. I work with teams in Brno, Prague and Bratislava, and remotely across the EU. Seven years of Swift, SwiftUI since its first release, and App Store apps I have shipped and maintained myself.",
+    "status": "Available now for freelance and contract work — from a two-week fix to a long-term engagement.",
+    "servicesHeading": "What I take on",
+    "services": [
+      {
+        "name": "A new iOS app, from scratch",
+        "body": "Specification to App Store listing. SwiftUI, Swift 6 with strict concurrency, SwiftData, StoreKit 2 — and the release at the end, which is the part most quotes leave out."
+      },
+      {
+        "name": "An existing codebase, inherited",
+        "body": "Someone built your app and left. I read it, tell you honestly what state it is in, and take it over — including the Objective-C and the UIKit nobody wants to touch."
+      },
+      {
+        "name": "UIKit to SwiftUI, incrementally",
+        "body": "Screen by screen, shipping the whole time. Not a rewrite that takes a year and never lands."
+      },
+      {
+        "name": "Release ownership",
+        "body": "Signing, App Store Connect, TestFlight, phased rollout, and the crash report that arrives at 7am. I have owned this end to end since 2019."
+      },
+      {
+        "name": "A design system that holds",
+        "body": "I owned one for an entire client platform, including the Swift tooling that exported its tokens. Components, tokens, and the pipeline that keeps design and code in step."
+      },
+      {
+        "name": "Widgets, Live Activities, HealthKit",
+        "body": "The system integrations that look small on a roadmap and take a fortnight in practice."
+      }
+    ],
+    "whereHeading": "Where I work",
+    "cities": [
+      {
+        "name": "Brno",
+        "body": "I live here. In-person kickoff, a workshop on site, or a coffee before either of us signs anything."
+      },
+      {
+        "name": "Praha",
+        "body": "Two and a half hours by train. Regular on-site days work, and I have run remote-first projects with Prague teams throughout."
+      },
+      {
+        "name": "Bratislava",
+        "body": "Slovak is my first language and I spent two years at O2 Slovakia. I know how the market and the invoicing work there."
+      },
+      {
+        "name": "Remote, across the EU",
+        "body": "Most of my work is remote and always has been. Overlapping hours, written updates, and a demo you can actually open."
+      }
+    ],
+    "processHeading": "How it starts",
+    "process": [
+      {
+        "name": "You write",
+        "body": "A paragraph is enough. What the app does, what state it is in, and when you need it."
+      },
+      {
+        "name": "We talk for half an hour",
+        "body": "Free. I will tell you if I am the wrong person, which happens and saves us both a month."
+      },
+      {
+        "name": "You get a scope and a number",
+        "body": "Fixed price for defined work, day rate for open-ended work. No retainer you cannot cancel."
+      }
+    ],
+    "faqHeading": "Questions I get asked",
+    "faq": [
+      {
+        "q": "Do you work remotely?",
+        "a": "Yes — most of my work always has been. I am in Brno, so Czech and Slovak hours overlap completely, and the rest of the EU is an hour or two either way."
+      },
+      {
+        "q": "Can you take over an app someone else built?",
+        "a": "Yes, and it is a lot of what I do. I read the codebase first and give you an honest assessment before either of us commits — including when the answer is that it needs rewriting."
+      },
+      {
+        "q": "Fixed price or day rate?",
+        "a": "Both. Fixed price when the scope is genuinely defined, day rate when it is not. I would rather quote a day rate than pretend an unclear scope is a firm number."
+      },
+      {
+        "q": "How quickly can you start?",
+        "a": "Usually within a week or two. Small, well-defined work can often start sooner — ask."
+      },
+      {
+        "q": "Do you handle App Store submission?",
+        "a": "Yes. Signing, App Store Connect, TestFlight, review, phased rollout, and whatever comes back from Apple. I have owned releases end to end since 2019."
+      },
+      {
+        "q": "What languages do you work in?",
+        "a": "Slovak, Czech and English — all three fluently, in writing and on calls."
+      },
+      {
+        "q": "Do you do Android too?",
+        "a": "Not on its own. I have shipped Kotlin Multiplatform and Compose Multiplatform on a shared codebase, so I can carry business logic across — but if you want a native Android app, hire an Android developer."
+      }
+    ],
+    "ctaHeading": "Tell me what you are building",
+    "ctaBody": "A paragraph, an App Store link, or a repo. Whichever is easiest.",
+    "ctaButton": "Email me"
   },
   "footer": {
     "identity": "PATRIK CESNEK · SENIOR iOS DEVELOPER · BRNO, CZ",
