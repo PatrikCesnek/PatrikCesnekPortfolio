@@ -27,6 +27,7 @@ const SKILLS = [
   'Clean Architecture',
   'Kotlin Multiplatform',
   'Compose Multiplatform',
+  'Flutter',
   'Design systems',
   'Design tokens',
   'CI/CD',

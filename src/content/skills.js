@@ -21,7 +21,7 @@ export const SKILL_ITEMS = [
     'Core Data',
   ],
   ['HTML (2 yrs)', 'CSS (2 yrs)', 'JavaScript (2 yrs)', 'React (2 yrs)'],
-  ['Kotlin Multiplatform (~2 yrs)', 'Compose MP (basics)', 'Kotlin (reading)', 'Gradle'],
+  ['Kotlin Multiplatform (~2 yrs)', 'Compose MP (basics)', 'Flutter', 'Kotlin (reading)', 'Gradle'],
   ['REST', 'Firebase (~2.5 yrs)', 'Firestore', 'SQLite', 'MySQL', 'MongoDB', 'Python'],
   [
     'App Store Connect (6+ yrs)',

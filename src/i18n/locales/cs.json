@@ -203,7 +203,7 @@
       },
       {
         "q": "Děláte i Android?",
-        "a": "Samostatně ne. Vydal jsem Kotlin Multiplatform a Compose Multiplatform nad sdíleným kódem, takže business logiku přenesu — ale pokud chcete nativní Android aplikaci, najměte si Android vývojáře."
+        "a": "Zčásti, a stojí za to být přesný. Flutter ano — jeden kód pro oba obchody je reálná varianta. Jednodušší nativní Android také a business logiku jsem přenášel přes Kotlin Multiplatform a Compose Multiplatform. Ale moje znalost Kotlinu je vedle Swiftu omezená: na cokoliv náročnějšího v nativním Androidu si najměte Android vývojáře."
       }
     ],
     "ctaHeading": "Napište mi, co stavíte",
@@ -225,7 +225,7 @@
     },
     {
       "group": "MULTIPLATFORMNÍ VÝVOJ",
-      "note": "Dva roky na sdílené KMP vrstvě; Kotlin pohodlně čtu a základy píšu."
+      "note": "Dva roky na sdílené KMP vrstvě; Kotlin pohodlně čtu a základy píšu. Flutter, když je jeden kód pro oba obchody správná volba."
     },
     {
       "group": "DATA A BACKEND",

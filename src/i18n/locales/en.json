@@ -203,7 +203,7 @@
       },
       {
         "q": "Do you do Android too?",
-        "a": "Not on its own. I have shipped Kotlin Multiplatform and Compose Multiplatform on a shared codebase, so I can carry business logic across — but if you want a native Android app, hire an Android developer."
+        "a": "Partly, and it is worth being precise. Flutter yes — one codebase across both stores is a real option. Simpler native Android too, and I have carried business logic across with Kotlin Multiplatform and Compose Multiplatform. But my Kotlin is limited next to my Swift: for anything demanding on native Android, hire an Android developer."
       }
     ],
     "ctaHeading": "Tell me what you are building",
@@ -225,7 +225,7 @@
     },
     {
       "group": "CROSS-PLATFORM",
-      "note": "Two years on a shared KMP layer; I read Kotlin comfortably and write the basics."
+      "note": "Two years on a shared KMP layer; I read Kotlin comfortably and write the basics. Flutter when one codebase across both stores is the right call."
     },
     {
       "group": "DATA & BACKEND",
