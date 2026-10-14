@@ -1,11 +1,20 @@
 /**
- * The marketing sites shipped for the apps above. All of them are hand-written
- * HTML, CSS and JavaScript — no framework, no build step — with JSON-LD
- * structured data, a sitemap and runtime language switching.
+ * The marketing sites shipped for the apps above: hand-written HTML, CSS and
+ * JavaScript with JSON-LD structured data, a sitemap and runtime language
+ * switching. DinoRyde's adds Vite and Vue islands for its interactive parts.
  *
  * Translatable copy lives in the locale files under `web.sites.<slug>`.
  */
 export const WEB_PROJECTS = [
+  {
+    slug: 'dinoryde',
+    name: 'DinoRyde',
+    image: 'web-dinoryde',
+    href: 'https://dinoryde.netlify.app/',
+    label: 'dinoryde.netlify.app',
+    locales: ['EN', 'CS', 'SK'],
+    tags: ['Vue', 'Vite', 'JavaScript', 'JSON-LD', 'Netlify'],
+  },
   {
     slug: 'apex',
     name: 'Apex Ryde',

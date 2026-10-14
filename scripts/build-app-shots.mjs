@@ -35,6 +35,11 @@ const SOURCES = [
     'reaper-4',
     'reaper-game/Marketing/AppStoreScreenshots/iPhone-6.9-2868x1320/04-profile.png',
   ],
+  // DinoRyde's App Store set lives beside the projects folder, not in the repo.
+  ['dinoryde-1', '../DinoRyde-AppStore/iPhone/herd-2.png'],
+  ['dinoryde-2', '../DinoRyde-AppStore/iPhone/herd-3.png'],
+  ['dinoryde-3', '../DinoRyde-AppStore/iPhone/herd-5.png'],
+  ['dinoryde-4', '../DinoRyde-AppStore/iPhone/herd-8.png'],
 ]
 
 await mkdir(OUT, { recursive: true })

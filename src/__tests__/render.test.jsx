@@ -76,11 +76,11 @@ describe('locale routing', () => {
 })
 
 describe('hero', () => {
-  it('opens on the newest entry — Reaper, a landscape project', () => {
+  it('opens on the newest entry — DinoRyde, a landscape project', () => {
     const html = at('/')
-    expect(html).toContain('Reaper')
-    expect(html).toContain(en.entries.reaper.blurb)
-    expect(html).toContain(en.entries.reaper.captions[0])
+    expect(html).toContain('DinoRyde')
+    expect(html).toContain(en.entries.dinoryde.blurb)
+    expect(html).toContain(en.entries.dinoryde.captions[0])
   })
 
   it('renders the ghost year as decorative', () => {
@@ -89,7 +89,7 @@ describe('hero', () => {
 
   it('shows every tag of the active entry', () => {
     const html = at('/')
-    for (const tag of ['Swift 6', 'SpriteKit', 'Strict concurrency', 'No dependencies']) {
+    for (const tag of ['Unity 6', 'C#', 'URP', 'Swift plugin', 'StoreKit 2']) {
       expect(html).toContain(`>${tag}<`)
     }
   })
@@ -214,25 +214,26 @@ describe('project page', () => {
     }
   })
 
-  it('points the unreleased game at its live site', () => {
+  it('points the unreleased games at their live sites', () => {
     expect(at('/projects/apex-ryde')).toContain('https://apex-ryder.netlify.app')
+    expect(at('/projects/dinoryde')).toContain('https://dinoryde.netlify.app/')
   })
 
   it('shows a web button only where one exists', () => {
-    // Apex has no separate marketing site beyond its own href.
+    // Apex and DinoRyde have no separate marketing site beyond their own href.
     const withWeb = ENTRIES.filter((e) => e.web).map((e) => e.slug)
     expect(withWeb).toEqual(['worldwanderer', 'sideq', 'reaper'])
   })
 
   it('wraps prev/next around the ends, oldest on the left', () => {
-    // Reaper is newest: next wraps to the oldest, prev is Apex Ryde.
-    const newest = at('/projects/reaper')
+    // DinoRyde is newest: next wraps to the oldest, prev is Reaper.
+    const newest = at('/projects/dinoryde')
     expect(newest).toContain('Independent iOS →')
-    expect(newest).toContain('← Apex Ryde')
+    expect(newest).toContain('← Reaper')
 
     // Independent iOS is oldest: prev wraps back to the newest.
     const oldest = at('/projects/independent-ios')
-    expect(oldest).toContain('← Reaper')
+    expect(oldest).toContain('← DinoRyde')
     expect(oldest).toContain('Matee →')
   })
 
