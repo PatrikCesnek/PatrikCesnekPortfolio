@@ -43,6 +43,7 @@ const READY = [
   ['web-sideq', 'sidequest-website/assets/og-home.png'],
   ['web-apex', 'apex-web/assets/og-image.png'],
   ['web-reaper', 'reaper-web/assets/og-image.png'],
+  ['web-dinoryde', 'DinoRydeWeb/public/assets/og-image.jpg'],
 ]
 
 for (const [name, rel] of READY) {

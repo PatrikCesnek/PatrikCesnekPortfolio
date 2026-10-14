@@ -12,7 +12,7 @@ import { slugify } from '../lib/slugify.js'
  */
 
 export const T_MIN = 2019.2
-export const T_MAX = 2026.75
+export const T_MAX = 2026.9
 
 const RAW = [
   {
@@ -137,6 +137,18 @@ const RAW = [
     images: ['reaper-1', 'reaper-2', 'reaper-3', 'reaper-4'],
     href: 'https://apps.apple.com/app/reaper-before-dawn/id6802620718',
     web: 'https://reaper-before-dawn.netlify.app',
+  },
+  {
+    t: 2026.78,
+    year: '2026',
+    date: '2026-10',
+    title: 'DinoRyde',
+    kind: 'own',
+    tags: ['Unity 6', 'C#', 'URP', 'Swift plugin', 'StoreKit 2'],
+    images: ['dinoryde-1', 'dinoryde-2', 'dinoryde-3', 'dinoryde-4'],
+    // Not on the Store yet, so like Apex Ryde it points at its own site
+    // rather than a placeholder App Store id.
+    href: 'https://dinoryde.netlify.app/',
   },
 ]
 
