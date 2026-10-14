@@ -86,6 +86,7 @@ export function person(site, dict) {
       'https://worldwanderer-web.netlify.app/',
       'https://apex-ryder.netlify.app',
       'https://reaper-before-dawn.netlify.app',
+      'https://dinoryde.netlify.app/',
     ],
     // The hire-me signal, stated in a form a machine can read.
     seeks: {

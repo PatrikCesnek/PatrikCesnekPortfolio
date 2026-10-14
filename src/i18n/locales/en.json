@@ -288,13 +288,29 @@
       "cta": "Open Reaper ↗",
       "hrefLabel": "App Store · reaper-before-dawn.netlify.app",
       "ctaWeb": "Open Reaper web ↗"
+    },
+    "dinoryde": {
+      "span": "MY FIRST UNITY GAME",
+      "short": "A first-person dinosaur riding game built in Unity, with gaits for gears and breath for engine heat.",
+      "blurb": "Ride a raptor down a winding forest trail, shift its gaits like a gearbox and hop the logs. My first Unity project and my first C#: the deterministic 120 Hz ride model from my motorbike sim, ported to Unity 6 and URP, with gaits as gears, breath as engine heat and a friction circle that throws careless riders. Every dinosaur, plant and sound is generated in code. A small Swift plugin bridges haptics, Game Center and StoreKit 2 for one-time purchases behind a parental gate, on iPhone, iPad and Mac.",
+      "notes": [],
+      "captions": [
+        "sprint · 70 km/h",
+        "an ankylosaur on the verge",
+        "+50 clean corner",
+        "a triceratops on the trail"
+      ],
+      "coverNote": "dinosaur riding",
+      "cta": "Open DinoRyde ↗",
+      "hrefLabel": "dinoryde.netlify.app"
     }
   },
   "web": {
     "heading": "Web",
-    "lede": "Every app above ships a site I designed, wrote, localized and deployed myself — hand-written HTML, CSS and JavaScript, no framework and no build step. If you need a landing page that loads instantly and speaks your customers' language, this is the work.",
+    "lede": "Every app above ships a site I designed, wrote, localized and deployed myself — hand-written HTML, CSS and JavaScript, with Vue only where a page needs to move. If you need a landing page that loads instantly and speaks your customers' language, this is the work.",
     "shotAlt": "The {name} site",
     "sites": {
+      "dinoryde": "The App Store site for the riding game, in the game's own forest palette. Vite and Vue islands over static HTML: a real-gameplay reel, a mount picker with the game's own stats, a colour-skin previewer, three languages and structured data.",
       "apex": "A landing page for the motorcycle sim, built in the same stretch as the game. Structured data, sitemap, and a page that paints before you notice it.",
       "reaper": "The support and privacy site the App Store listing points at, drawn in the game's own palette. A light that follows the pointer to restate the game's core mechanic, three languages, and structured data.",
       "sideq": "The product site: five languages switched at runtime, JSON-LD for search, and a straight path from landing to the App Store.",

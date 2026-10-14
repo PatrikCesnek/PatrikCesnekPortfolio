@@ -288,13 +288,29 @@
       "cta": "Otevřít Reaper ↗",
       "hrefLabel": "App Store · reaper-before-dawn.netlify.app",
       "ctaWeb": "Otevřít web Reaper ↗"
+    },
+    "dinoryde": {
+      "span": "MOJE PRVNÍ HRA V UNITY",
+      "short": "Jezdecká hra na dinosaurech z pohledu první osoby v Unity: chody místo převodů, dech místo přehřívání motoru.",
+      "blurb": "Jezdi na raptorovi po klikaté lesní stezce, přeřazuj jeho chody jako na převodovce a přeskakuj kmeny. Můj první projekt v Unity a můj první C#: deterministický model jízdy z mého simulátoru motorky na 120 Hz přenesený do Unity 6 a URP, chody jako převody, dech jako přehřívání motoru a frikční kružnice, která shodí neopatrného jezdce. Každý dinosaurus, rostlina i zvuk jsou generované v kódu. Malý Swift plugin propojuje vibrace, Game Center a StoreKit 2 pro jednorázové nákupy za rodičovskou bránou, na iPhonu, iPadu i Macu.",
+      "notes": [],
+      "captions": [
+        "sprint · 70 km/h",
+        "ankylosaurus u stezky",
+        "+50 za čistou zatáčku",
+        "triceratops na stezce"
+      ],
+      "coverNote": "jízda na dinosaurech",
+      "cta": "Otevřít DinoRyde ↗",
+      "hrefLabel": "dinoryde.netlify.app"
     }
   },
   "web": {
     "heading": "Web",
-    "lede": "Ke každé aplikaci výše patří web, který jsem navrhl, napsal, lokalizoval a nasadil sám — ručně psané HTML, CSS a JavaScript, žádný framework a žádný build. Pokud potřebujete landing page, která se načte okamžitě a mluví jazykem vašich zákazníků, tohle je ta práce.",
+    "lede": "Ke každé aplikaci výše patří web, který jsem navrhl, napsal, lokalizoval a nasadil sám — ručně psané HTML, CSS a JavaScript, s Vue jen tam, kde se stránka musí hýbat. Pokud potřebujete landing page, která se načte okamžitě a mluví jazykem vašich zákazníků, tohle je ta práce.",
     "shotAlt": "Web {name}",
     "sites": {
+      "dinoryde": "Web pro App Store k jezdecké hře v lesní paletě samotné hry. Vite a Vue ostrůvky nad statickým HTML: ukázka skutečné hry, výběr dina se statistikami ze hry, náhled barev, tři jazyky a strukturovaná data.",
       "apex": "Landing page pro motorkářský simulátor, vzniklá ve stejném období jako hra. Strukturovaná data, sitemap a stránka, která se vykreslí dřív, než si toho všimnete.",
       "reaper": "Web s podporou a soukromím, na který odkazuje listing v App Storu, v paletě samotné hry. Světlo sledující kurzor zopakuje hlavní mechaniku hry, tři jazyky a strukturovaná data.",
       "sideq": "Produktový web: pět jazyků přepínaných za běhu, JSON-LD pro vyhledávače a přímá cesta z landing page na App Store.",
